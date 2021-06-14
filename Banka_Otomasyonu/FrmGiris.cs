@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using System.Data.SqlClient; //sql bağlantı sınıfı
+using System.Net;
+using System.Net.Mail; //mail bağlantı sınıfı
+
 
 namespace Banka_Otomasyonu
 {
@@ -105,6 +108,63 @@ namespace Banka_Otomasyonu
         {
             groupControl2.Visible = false;
             groupControl1.Visible = true;            
+        }
+
+        private void BtnGonder_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("select * from Tbl_Kullanicilar where Kullanici_Email=@p1", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", TxtMail.Text);
+
+            SqlDataReader oku = komut.ExecuteReader();          
+
+            while (oku.Read())
+            {
+                try
+                {
+                    if (bgl.baglanti().State == ConnectionState.Closed)
+                    {
+                        bgl.baglanti().Open();
+                    }
+                    SmtpClient smtpserver = new SmtpClient();
+                    MailMessage mail = new MailMessage();
+                    string tarih = DateTime.Now.ToLongDateString(); //string tarih aldık
+                    string mailadresim = ("mailadresiniz");
+                    string sifre = ("sifreniz");
+                    string smtpsrvr = "smtp.gmail.com";
+                    string kime = (oku["Kullanici_Email"].ToString());
+                    string konu = ("Sifre Hatırlatma Maili");
+                    string yaz = ("Sayın"+oku["Kullanici_AdSoyad"].ToString()+"\n"+"Bizden"+tarih+"Tarihinde Şifre Hatrılatma Talebinde " +
+                        "Bulundunuz" + "\n" + "Parolanız" + oku["Kullanici_Sifre"].ToString() + "İyi Günler");
+
+                    smtpserver.Credentials = new NetworkCredential(mailadresim, sifre);
+                    smtpserver.Port = 587;
+                    smtpserver.Host = smtpsrvr;
+                    smtpserver.EnableSsl = true;
+
+                    mail.From = new MailAddress(mailadresim);
+                    mail.To.Add(kime);
+                    mail.Subject = konu;
+                    mail.Body = yaz;
+
+                    smtpserver.Send(mail);
+
+                    DialogResult bilgi = new DialogResult();
+                    bilgi = MessageBox.Show("Girmiş olduğunuz bilgiler uyuşuyor bilgileriniz mail adresinize başarılı bir şekilde gönderilmiştir");
+                    this.Hide();
+                    FrmGiris fk = new FrmGiris();
+                    fk.Show();
+
+                }
+                catch (Exception Hata)
+                {
+                    MessageBox.Show("Mail gönderme hatası!",Hata.Message);
+                }
+            }
+
+
+
+
+
         }
     }
 }

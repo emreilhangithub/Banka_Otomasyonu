@@ -193,6 +193,7 @@ namespace Banka_Otomasyonu
             this.BtnGonder.Size = new System.Drawing.Size(65, 33);
             this.BtnGonder.TabIndex = 13;
             this.BtnGonder.Text = "Gönder";
+            this.BtnGonder.Click += new System.EventHandler(this.BtnGonder_Click);
             // 
             // LblBaslik
             // 
@@ -222,14 +223,15 @@ namespace Banka_Otomasyonu
             this.groupControl2.Controls.Add(this.LblBaslik);
             this.groupControl2.Controls.Add(this.BtnGonder);
             this.groupControl2.Controls.Add(this.Lnkİptal);
-            this.groupControl2.Location = new System.Drawing.Point(381, 164);
+            this.groupControl2.Location = new System.Drawing.Point(159, 92);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(58, 43);
+            this.groupControl2.Size = new System.Drawing.Size(280, 115);
             this.groupControl2.TabIndex = 10;
             this.groupControl2.Visible = false;
             // 
             // TxtMail
             // 
+            this.TxtMail.EditValue = "";
             this.TxtMail.Location = new System.Drawing.Point(68, 50);
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Size = new System.Drawing.Size(130, 20);
