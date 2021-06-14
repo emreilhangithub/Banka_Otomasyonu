@@ -61,7 +61,9 @@ namespace Banka_Otomasyonu
                 {
                     FrmMusteri fm = new FrmMusteri();
                     this.Hide();
+                    fm.MusteriNo = TxtMusteri.Text;
                     fm.Show();
+                    
                 }
                 else
                 {

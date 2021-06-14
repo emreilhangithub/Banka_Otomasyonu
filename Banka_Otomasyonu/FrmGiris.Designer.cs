@@ -136,6 +136,7 @@ namespace Banka_Otomasyonu
             // 
             // TxtMusteri
             // 
+            this.TxtMusteri.EditValue = "6000001";
             this.TxtMusteri.Location = new System.Drawing.Point(149, 46);
             this.TxtMusteri.Name = "TxtMusteri";
             this.TxtMusteri.Properties.UseSystemPasswordChar = true;
@@ -225,7 +226,7 @@ namespace Banka_Otomasyonu
             this.groupControl2.Controls.Add(this.Lnkİptal);
             this.groupControl2.Location = new System.Drawing.Point(159, 92);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(280, 115);
+            this.groupControl2.Size = new System.Drawing.Size(280, 117);
             this.groupControl2.TabIndex = 10;
             this.groupControl2.Visible = false;
             // 
