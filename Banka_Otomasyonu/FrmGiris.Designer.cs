@@ -1,7 +1,7 @@
 ﻿
 namespace Banka_Otomasyonu
 {
-    partial class Form1
+    partial class FrmGiris
     {
         /// <summary>
         /// Required designer variable.
@@ -138,6 +138,7 @@ namespace Banka_Otomasyonu
             // 
             this.TxtMusteri.Location = new System.Drawing.Point(149, 46);
             this.TxtMusteri.Name = "TxtMusteri";
+            this.TxtMusteri.Properties.UseSystemPasswordChar = true;
             this.TxtMusteri.Size = new System.Drawing.Size(126, 20);
             this.TxtMusteri.TabIndex = 6;
             // 
@@ -221,9 +222,9 @@ namespace Banka_Otomasyonu
             this.groupControl2.Controls.Add(this.LblBaslik);
             this.groupControl2.Controls.Add(this.BtnGonder);
             this.groupControl2.Controls.Add(this.Lnkİptal);
-            this.groupControl2.Location = new System.Drawing.Point(159, 92);
+            this.groupControl2.Location = new System.Drawing.Point(381, 164);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(280, 115);
+            this.groupControl2.Size = new System.Drawing.Size(58, 43);
             this.groupControl2.TabIndex = 10;
             this.groupControl2.Visible = false;
             // 
@@ -234,7 +235,7 @@ namespace Banka_Otomasyonu
             this.TxtMail.Size = new System.Drawing.Size(130, 20);
             this.TxtMail.TabIndex = 10;
             // 
-            // Form1
+            // FrmGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -247,7 +248,7 @@ namespace Banka_Otomasyonu
             this.Controls.Add(this.labelControl1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Name = "FrmGiris";
             this.Text = "Sisteme Giriş";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TxtKullaniciAdi.Properties)).EndInit();
