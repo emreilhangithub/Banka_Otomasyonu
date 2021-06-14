@@ -115,7 +115,7 @@ namespace Banka_Otomasyonu
             kbakiye = Convert.ToDouble(LblKulBakiye.Text);           
 
 
-            if (bakiye > 0 && kbakiye > 0)
+            if (bakiye > 0 && kbakiye > 0 && cekilen<bakiye && cekilen<kbakiye)
             {
                 SqlCommand komut = new SqlCommand("update Tbl_Hesaplar set Hesap_Bakiyesi=Hesap_Bakiyesi-@p1,Hesap_KulBakiye=Hesap_KulBakiye-@p1 where Hesap_Numarasi=@p2", bgl.baglanti());
                 komut.Parameters.AddWithValue("@p1", cekilen.ToString());
@@ -129,7 +129,7 @@ namespace Banka_Otomasyonu
                 this.Show();
             }
 
-            else if (kbakiye <= 0)
+            else if (kbakiye <= 0 || cekilen >= kbakiye)
             {
                 MessageBox.Show("Kullanılabilir bakiye yetersiz Çekim Yapılmaz");
             }
