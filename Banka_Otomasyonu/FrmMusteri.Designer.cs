@@ -805,15 +805,21 @@ namespace Banka_Otomasyonu
             this.gridControl1.TabIndex = 26;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
+            this.gridControl1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gridControl1_MouseClick);
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.Row.BackColor = System.Drawing.Color.Blue;
+            this.gridView1.Appearance.Row.BackColor2 = System.Drawing.Color.Aqua;
+            this.gridView1.Appearance.Row.Options.UseBackColor = true;
             this.gridView1.DetailHeight = 512;
             this.gridView1.FixedLineWidth = 3;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // lblTarih2
             // 
@@ -940,8 +946,8 @@ namespace Banka_Otomasyonu
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 509);
-            this.Controls.Add(this.panelParaIslemleri);
             this.Controls.Add(this.panelRapor);
+            this.Controls.Add(this.panelParaIslemleri);
             this.Controls.Add(this.panelKur);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.LblMusNo);

@@ -392,16 +392,34 @@ namespace Banka_Otomasyonu
 
 
             //SqlCommand komut = new SqlCommand("Select * from Tbl_Islemler where Musteri_Numarasi=@p1", bgl.baglanti());
-            SqlCommand komut = new SqlCommand("Select * from Tbl_Islemler where Islem_Tarihi BETWEEN @p1 and @p2 and Musteri_Numarasi=@p3", bgl.baglanti());
-            komut.Parameters.AddWithValue("@p1", date1);
-            komut.Parameters.AddWithValue("@p2", date2);
-            komut.Parameters.AddWithValue("@p3", MusteriNo);
+            //SqlCommand komut = new SqlCommand("Select * from Tbl_Islemler where Islem_Tarihi BETWEEN @p1 and @p2 and Musteri_Numarasi=@p3", bgl.baglanti());
+            SqlCommand komut = new SqlCommand("SELECT Musteri_Ad,Musteri_Soyad,Hesap_Numarasi,Tur_Ad,Islem_Tarihi,Islem_Tutari FROM Tbl_Islemler as isl INNER JOIN Tbl_IslemTuru as it ON isl.Islem_Turu = it.Tur_Id INNER JOIN Tbl_Musteriler as m ON isl.Musteri_Numarasi = m.Musteri_Numarasi where Islem_Tarihi BETWEEN @date1 and @date2 and isl.Musteri_Numarasi = @MusteriNo", bgl.baglanti());
+            komut.Parameters.AddWithValue("@date1", date1);
+            komut.Parameters.AddWithValue("@date2", date2);
+            komut.Parameters.AddWithValue("@MusteriNo", MusteriNo);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable(); //datatable oluşturduk
             da.Fill(dt);
             gridControl1.DataSource = dt;
         }
 
-       
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void gridControl1_MouseClick(object sender, MouseEventArgs e)
+        {
+          
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            if(dr!=null)
+            {
+                MessageBox.Show(dr[4]+" tarihinde "+dr[0]+" "+dr[1] + " tarafından " + dr[3] + " işlemi yapılmıştır ");
+            }
+        }
     }
 }
