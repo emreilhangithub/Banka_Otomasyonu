@@ -96,5 +96,32 @@ namespace Banka_Otomasyonu
                 e.Handled = true; 
             }
         }
+
+        private void txtKullaniciSil_Click(object sender, EventArgs e)
+        {
+            if
+               (              
+               string.IsNullOrEmpty(txtKullaniciAdi.Text) 
+               )
+            {
+                MessageBox.Show("Lütfen Silmek İstediginiz Kullanıcı Adını Kontrol Ediniz");
+                return;
+            }
+
+            kullaniciMukerrerKontrol();//mükerrer varmı kontrol et
+            if (mukerrerDurum == true) //kayıt varsa sil
+            {
+                SqlCommand kullaniciSilKomutu = new SqlCommand("delete from Tbl_Kullanicilar where Kullanici_Adi=@Kullanici_Adi", bgl.baglanti());
+                kullaniciSilKomutu.Parameters.AddWithValue("@Kullanici_Adi", txtKullaniciAdi.Text);
+                kullaniciSilKomutu.ExecuteNonQuery();
+                bgl.baglanti().Close();
+                XtraMessageBox.Show("Kullanıcı Silme İşlemi Başarılı");
+            }
+
+            else
+            {
+                MessageBox.Show("Lütfen Kayıtlı Bir KullanıcıAdı Giriniz");
+            }           
+        }
     }
 }

@@ -145,7 +145,7 @@ namespace Banka_Otomasyonu
             this.txtKullaniciSil.Size = new System.Drawing.Size(91, 23);
             this.txtKullaniciSil.TabIndex = 10;
             this.txtKullaniciSil.Text = "Sil";
-            this.txtKullaniciSil.Visible = false;
+            this.txtKullaniciSil.Click += new System.EventHandler(this.txtKullaniciSil_Click);
             // 
             // txtKullaniciGuncelle
             // 
