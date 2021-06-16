@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient; //sql bağlantı sınıfı
 using System.Net;
 using System.Net.Mail; //mail bağlantı sınıfı
+using DevExpress.XtraEditors;//dev expresi bagladık
 
 
 namespace Banka_Otomasyonu
 {
-    public partial class FrmGiris : Form
+    public partial class FrmGiris : XtraForm
     {
         public FrmGiris()
         {

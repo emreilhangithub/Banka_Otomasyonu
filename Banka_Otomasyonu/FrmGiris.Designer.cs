@@ -128,6 +128,7 @@ namespace Banka_Otomasyonu
             // 
             // TxtKullaniciAdi
             // 
+            this.TxtKullaniciAdi.EditValue = "MustafaEmre";
             this.TxtKullaniciAdi.Location = new System.Drawing.Point(149, 20);
             this.TxtKullaniciAdi.Name = "TxtKullaniciAdi";
             this.TxtKullaniciAdi.Size = new System.Drawing.Size(126, 20);
@@ -244,8 +245,8 @@ namespace Banka_Otomasyonu
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 301);
-            this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);

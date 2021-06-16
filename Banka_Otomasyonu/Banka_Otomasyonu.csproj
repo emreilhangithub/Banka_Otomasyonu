@@ -102,6 +102,9 @@
     <EmbeddedResource Include="FrmGiris.resx">
       <DependentUpon>FrmGiris.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmKullanici.resx">
+      <DependentUpon>FrmKullanici.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMusteri.resx">
       <DependentUpon>FrmMusteri.cs</DependentUpon>
     </EmbeddedResource>
