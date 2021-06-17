@@ -14,12 +14,21 @@ namespace Banka_Otomasyonu
         }
 
         sqlbaglantisi bgl = new sqlbaglantisi();
-        bool mukerrerDurum;//mukerrer kontrol
-        bool aramaDurum; //arama kontrol
+        bool mukerrerDurum;//mukerrer kontrol kullanıcı
+        bool aramaDurum; //arama butonu kontrol
+        bool islemDurum; //işlem türü kontrol
+       
 
         private void FrmKullanici_Load(object sender, EventArgs e)
         {
-
+            //işlem türlerini listeledik
+            SqlCommand islemTuruCekKomutu = new SqlCommand("Select Tur_Ad From Tbl_IslemTuru", bgl.baglanti());
+            SqlDataReader islemTuruOku = islemTuruCekKomutu.ExecuteReader();
+            while (islemTuruOku.Read())
+            {
+                CmbIslemTurleri.Properties.Items.Add(islemTuruOku[0]);
+            }
+            bgl.baglanti().Close();
         }
 
         void kullaniciMukerrerKontrol()
@@ -54,6 +63,23 @@ namespace Banka_Otomasyonu
             else
             {
                 aramaDurum = false;
+            }
+            bgl.baglanti().Close();
+        }
+
+        void islemTuruMukerrerKontrol()
+        {
+            SqlCommand komut = new SqlCommand("select * from Tbl_IslemTuru where Tur_Ad=@Tur_Ad", bgl.baglanti());
+            komut.Parameters.AddWithValue("@Tur_Ad", txtYeniIslemTuru.Text);
+            SqlDataReader dr = komut.ExecuteReader();
+
+            if (dr.Read())
+            {
+                islemDurum = true;
+            }
+            else
+            {
+                islemDurum = false;
             }
             bgl.baglanti().Close();
         }
@@ -129,7 +155,7 @@ namespace Banka_Otomasyonu
                 kullaniciSilKomutu.ExecuteNonQuery();
                 bgl.baglanti().Close();
                 XtraMessageBox.Show("Kullanıcı Silme İşlemi Başarılı");
-                grpKullaniciIslemleri.Visible = false;
+                pnlKullaniciIslemleri.Visible = false;
             }
 
             else
@@ -191,7 +217,8 @@ namespace Banka_Otomasyonu
             kullaniciAramaKayitlimi();
             if (aramaDurum == true)
             {
-                grpKullaniciIslemleri.Visible = true;
+                pnlIslemTurleri.Visible = false;
+                pnlKullaniciIslemleri.Visible = true;
                 btnKullaniciEkle.Visible = false;
                 btnKullaniciGuncelle.Visible = true;
                 btnKullaniciSil.Visible = true;
@@ -217,7 +244,7 @@ namespace Banka_Otomasyonu
             else
             {
                 XtraMessageBox.Show("Lütfen kayıtlı bir kullanıcı adı giriniz");
-                grpKullaniciIslemleri.Visible = false;
+                pnlKullaniciIslemleri.Visible = false;
             }
 
 
@@ -228,12 +255,13 @@ namespace Banka_Otomasyonu
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-        }        
+        }
 
 
         private void btnYeniKullaniciEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            grpKullaniciIslemleri.Visible = true;
+            pnlIslemTurleri.Visible = false;
+            pnlKullaniciIslemleri.Visible = true;
             btnKullaniciEkle.Visible = true;
             btnKullaniciGuncelle.Visible = false;
             btnKullaniciSil.Visible = false;
@@ -248,12 +276,63 @@ namespace Banka_Otomasyonu
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            pnlKullaniciIslemleri.Visible = false;
+            pnlIslemTurleri.Visible = true;
+           
+           
+            
         }
 
         private void barMusteriYeniHesapAc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
+        }
+
+        private void btnIslemEkle_Click(object sender, EventArgs e)
+        {           
+            //Tüm alanlarda girişi zorunlu tuttuk
+            if
+                (
+                string.IsNullOrEmpty(txtYeniIslemTuru.Text)
+                )
+            {
+                MessageBox.Show("Lütfen Tüm Alanları eksiksiz doldurunuz");
+                return;
+            }
+
+        islemTuruMukerrerKontrol();//mükerrer varmı kontrol et
+            if (islemDurum == false) //yoksa kayit et
+            {
+                SqlCommand IslemEkleKomutu = new SqlCommand("insert into Tbl_IslemTuru (Tur_Ad) values(@Tur_Ad)", bgl.baglanti());
+        IslemEkleKomutu.Parameters.AddWithValue("@Tur_Ad", txtYeniIslemTuru.Text);
+                IslemEkleKomutu.ExecuteNonQuery();
+                bgl.baglanti().Close();
+        XtraMessageBox.Show("İşlem Ekleme işlemi Başarılı");               
+            }
+
+            else
+            {
+                XtraMessageBox.Show("Bu işlem türü zaten var tekrar deneyiniz");
+            }
+        }
+
+        private void btnIslemSil_Click(object sender, EventArgs e)
+        {
+            //Tüm alanlarda girişi zorunlu tuttuk
+            if
+                (
+                string.IsNullOrEmpty(CmbIslemTurleri.Text)
+                )
+            {
+                MessageBox.Show("Lütfen İşlem Türünü Seçiniz");
+                return;
+            }           
+            
+                SqlCommand IslemEkleKomutu = new SqlCommand("Delete From Tbl_IslemTuru where Tur_Ad = @Tur_Ad", bgl.baglanti());
+                IslemEkleKomutu.Parameters.AddWithValue("@Tur_Ad", CmbIslemTurleri.Text);
+                IslemEkleKomutu.ExecuteNonQuery();
+                bgl.baglanti().Close();
+                XtraMessageBox.Show("İşlem Silme işlemi Başarılı");               
         }
     }
 }

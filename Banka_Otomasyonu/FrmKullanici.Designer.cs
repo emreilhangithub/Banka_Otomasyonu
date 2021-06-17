@@ -43,18 +43,6 @@ namespace Banka_Otomasyonu
             this.errorListDockPanel1_Container = new DevExpress.XtraReports.UserDesigner.DesignControlContainer();
             this.groupAndSortDockPanel1 = new DevExpress.XtraReports.UserDesigner.GroupAndSortDockPanel();
             this.groupAndSortDockPanel1_Container = new DevExpress.XtraReports.UserDesigner.DesignControlContainer();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtKullaniciAdi = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtKullaniciAdSoyad = new DevExpress.XtraEditors.TextEdit();
-            this.txtKullaniciEmail = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btnKullaniciEkle = new DevExpress.XtraEditors.SimpleButton();
-            this.txtKullaniciSifre = new DevExpress.XtraEditors.TextEdit();
-            this.btnKullaniciGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.btnKullaniciSil = new DevExpress.XtraEditors.SimpleButton();
-            this.grpKullaniciIslemleri = new DevExpress.XtraEditors.GroupControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -66,7 +54,7 @@ namespace Banka_Otomasyonu
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barIslemMenu = new DevExpress.XtraBars.BarSubItem();
             this.barKullanici = new DevExpress.XtraBars.BarSubItem();
-            this.btnYeniKullaniciEklee = new DevExpress.XtraBars.BarButtonItem();
+            this.barYeniKullaniciEkle = new DevExpress.XtraBars.BarButtonItem();
             this.barMusteri = new DevExpress.XtraBars.BarSubItem();
             this.barMusteriYeniHesapAc = new DevExpress.XtraBars.BarButtonItem();
             this.barBankaRapor = new DevExpress.XtraBars.BarButtonItem();
@@ -84,25 +72,50 @@ namespace Banka_Otomasyonu
             this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.btnYeniKullaniciEklee = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barHeaderItem2 = new DevExpress.XtraBars.BarHeaderItem();
             this.barLinkContainerItem1 = new DevExpress.XtraBars.BarLinkContainerItem();
             this.barEditItem3 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemTextEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.barYeniKullaniciEkle = new DevExpress.XtraBars.BarButtonItem();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdSoyad.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciEmail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciSifre.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpKullaniciIslemleri)).BeginInit();
-            this.grpKullaniciIslemleri.SuspendLayout();
+            this.pnlKullaniciIslemleri = new DevExpress.XtraEditors.PanelControl();
+            this.btnKullaniciSil = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKullaniciGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.txtKullaniciSifre = new DevExpress.XtraEditors.TextEdit();
+            this.btnKullaniciEkle = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtKullaniciEmail = new DevExpress.XtraEditors.TextEdit();
+            this.txtKullaniciAdSoyad = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtKullaniciAdi = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.pnlIslemTurleri = new DevExpress.XtraEditors.PanelControl();
+            this.CmbIslemTurleri = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtYeniIslemTuru = new DevExpress.XtraEditors.TextEdit();
+            this.btnIslemEkle = new System.Windows.Forms.Button();
+            this.btnIslemSil = new System.Windows.Forms.Button();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlKullaniciIslemleri)).BeginInit();
+            this.pnlKullaniciIslemleri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciSifre.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdSoyad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlIslemTurleri)).BeginInit();
+            this.pnlIslemTurleri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbIslemTurleri.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYeniIslemTuru.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContainer3
@@ -219,117 +232,6 @@ namespace Banka_Otomasyonu
             this.groupAndSortDockPanel1_Container.Name = "groupAndSortDockPanel1_Container";
             this.groupAndSortDockPanel1_Container.Size = new System.Drawing.Size(465, 144);
             this.groupAndSortDockPanel1_Container.TabIndex = 0;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(113, 130);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(26, 13);
-            this.labelControl3.TabIndex = 4;
-            this.labelControl3.Text = "Şifre:";
-            // 
-            // txtKullaniciAdi
-            // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(191, 101);
-            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(333, 20);
-            this.txtKullaniciAdi.TabIndex = 3;
-            this.txtKullaniciAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKullaniciAdi_KeyPress);
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(113, 104);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(59, 13);
-            this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Kullanıcı Adı:";
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(113, 156);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(28, 13);
-            this.labelControl4.TabIndex = 6;
-            this.labelControl4.Text = "Email:";
-            // 
-            // txtKullaniciAdSoyad
-            // 
-            this.txtKullaniciAdSoyad.Location = new System.Drawing.Point(191, 75);
-            this.txtKullaniciAdSoyad.Name = "txtKullaniciAdSoyad";
-            this.txtKullaniciAdSoyad.Size = new System.Drawing.Size(333, 20);
-            this.txtKullaniciAdSoyad.TabIndex = 1;
-            // 
-            // txtKullaniciEmail
-            // 
-            this.txtKullaniciEmail.Location = new System.Drawing.Point(191, 153);
-            this.txtKullaniciEmail.Name = "txtKullaniciEmail";
-            this.txtKullaniciEmail.Size = new System.Drawing.Size(333, 20);
-            this.txtKullaniciEmail.TabIndex = 7;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(113, 78);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(50, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Ad Soyad:";
-            // 
-            // btnKullaniciEkle
-            // 
-            this.btnKullaniciEkle.Location = new System.Drawing.Point(433, 179);
-            this.btnKullaniciEkle.Name = "btnKullaniciEkle";
-            this.btnKullaniciEkle.Size = new System.Drawing.Size(91, 23);
-            this.btnKullaniciEkle.TabIndex = 8;
-            this.btnKullaniciEkle.Text = "Ekle";
-            this.btnKullaniciEkle.Click += new System.EventHandler(this.btnKullaniciEkle_Click);
-            // 
-            // txtKullaniciSifre
-            // 
-            this.txtKullaniciSifre.Location = new System.Drawing.Point(191, 127);
-            this.txtKullaniciSifre.Name = "txtKullaniciSifre";
-            this.txtKullaniciSifre.Size = new System.Drawing.Size(333, 20);
-            this.txtKullaniciSifre.TabIndex = 5;
-            // 
-            // btnKullaniciGuncelle
-            // 
-            this.btnKullaniciGuncelle.Location = new System.Drawing.Point(312, 179);
-            this.btnKullaniciGuncelle.Name = "btnKullaniciGuncelle";
-            this.btnKullaniciGuncelle.Size = new System.Drawing.Size(91, 23);
-            this.btnKullaniciGuncelle.TabIndex = 9;
-            this.btnKullaniciGuncelle.Text = "Güncelle";
-            this.btnKullaniciGuncelle.Visible = false;
-            this.btnKullaniciGuncelle.Click += new System.EventHandler(this.txtKullaniciGuncelle_Click);
-            // 
-            // btnKullaniciSil
-            // 
-            this.btnKullaniciSil.Location = new System.Drawing.Point(191, 179);
-            this.btnKullaniciSil.Name = "btnKullaniciSil";
-            this.btnKullaniciSil.Size = new System.Drawing.Size(91, 23);
-            this.btnKullaniciSil.TabIndex = 10;
-            this.btnKullaniciSil.Text = "Sil";
-            this.btnKullaniciSil.Visible = false;
-            this.btnKullaniciSil.Click += new System.EventHandler(this.txtKullaniciSil_Click);
-            // 
-            // grpKullaniciIslemleri
-            // 
-            this.grpKullaniciIslemleri.Controls.Add(this.btnKullaniciSil);
-            this.grpKullaniciIslemleri.Controls.Add(this.btnKullaniciGuncelle);
-            this.grpKullaniciIslemleri.Controls.Add(this.txtKullaniciSifre);
-            this.grpKullaniciIslemleri.Controls.Add(this.btnKullaniciEkle);
-            this.grpKullaniciIslemleri.Controls.Add(this.labelControl1);
-            this.grpKullaniciIslemleri.Controls.Add(this.txtKullaniciEmail);
-            this.grpKullaniciIslemleri.Controls.Add(this.txtKullaniciAdSoyad);
-            this.grpKullaniciIslemleri.Controls.Add(this.labelControl4);
-            this.grpKullaniciIslemleri.Controls.Add(this.labelControl2);
-            this.grpKullaniciIslemleri.Controls.Add(this.txtKullaniciAdi);
-            this.grpKullaniciIslemleri.Controls.Add(this.labelControl3);
-            this.grpKullaniciIslemleri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpKullaniciIslemleri.Location = new System.Drawing.Point(0, 22);
-            this.grpKullaniciIslemleri.Name = "grpKullaniciIslemleri";
-            this.grpKullaniciIslemleri.Size = new System.Drawing.Size(848, 428);
-            this.grpKullaniciIslemleri.TabIndex = 9;
-            this.grpKullaniciIslemleri.Text = "Kullanici İşlemleri";
-            this.grpKullaniciIslemleri.Visible = false;
             // 
             // barManager1
             // 
@@ -457,12 +359,12 @@ namespace Banka_Otomasyonu
             new DevExpress.XtraBars.LinkPersistInfo(this.barYeniKullaniciEkle)});
             this.barKullanici.Name = "barKullanici";
             // 
-            // btnYeniKullaniciEklee
+            // barYeniKullaniciEkle
             // 
-            this.btnYeniKullaniciEklee.Caption = "Yeni Kayıt";
-            this.btnYeniKullaniciEklee.Id = 8;
-            this.btnYeniKullaniciEklee.Name = "btnYeniKullaniciEklee";
-            this.btnYeniKullaniciEklee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
+            this.barYeniKullaniciEkle.Caption = "Yeni Kayıt";
+            this.barYeniKullaniciEkle.Id = 20;
+            this.barYeniKullaniciEkle.Name = "barYeniKullaniciEkle";
+            this.barYeniKullaniciEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYeniKullaniciEkle_ItemClick);
             // 
             // barMusteri
             // 
@@ -582,6 +484,13 @@ namespace Banka_Otomasyonu
             this.repositoryItemTextEdit1.AutoHeight = false;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
+            // btnYeniKullaniciEklee
+            // 
+            this.btnYeniKullaniciEklee.Caption = "Yeni Kayıt";
+            this.btnYeniKullaniciEklee.Id = 8;
+            this.btnYeniKullaniciEklee.Name = "btnYeniKullaniciEklee";
+            this.btnYeniKullaniciEklee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
+            // 
             // barStaticItem1
             // 
             this.barStaticItem1.Caption = "barStaticItem1";
@@ -617,19 +526,205 @@ namespace Banka_Otomasyonu
             this.repositoryItemTextEdit4.AutoHeight = false;
             this.repositoryItemTextEdit4.Name = "repositoryItemTextEdit4";
             // 
-            // barYeniKullaniciEkle
+            // pnlKullaniciIslemleri
             // 
-            this.barYeniKullaniciEkle.Caption = "Yeni Kayıt";
-            this.barYeniKullaniciEkle.Id = 20;
-            this.barYeniKullaniciEkle.Name = "barYeniKullaniciEkle";
-            this.barYeniKullaniciEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYeniKullaniciEkle_ItemClick);
+            this.pnlKullaniciIslemleri.Controls.Add(this.btnKullaniciSil);
+            this.pnlKullaniciIslemleri.Controls.Add(this.btnKullaniciGuncelle);
+            this.pnlKullaniciIslemleri.Controls.Add(this.txtKullaniciSifre);
+            this.pnlKullaniciIslemleri.Controls.Add(this.btnKullaniciEkle);
+            this.pnlKullaniciIslemleri.Controls.Add(this.labelControl1);
+            this.pnlKullaniciIslemleri.Controls.Add(this.txtKullaniciEmail);
+            this.pnlKullaniciIslemleri.Controls.Add(this.txtKullaniciAdSoyad);
+            this.pnlKullaniciIslemleri.Controls.Add(this.labelControl4);
+            this.pnlKullaniciIslemleri.Controls.Add(this.labelControl2);
+            this.pnlKullaniciIslemleri.Controls.Add(this.txtKullaniciAdi);
+            this.pnlKullaniciIslemleri.Controls.Add(this.labelControl3);
+            this.pnlKullaniciIslemleri.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlKullaniciIslemleri.Location = new System.Drawing.Point(0, 22);
+            this.pnlKullaniciIslemleri.Name = "pnlKullaniciIslemleri";
+            this.pnlKullaniciIslemleri.Size = new System.Drawing.Size(848, 428);
+            this.pnlKullaniciIslemleri.TabIndex = 18;
+            this.pnlKullaniciIslemleri.Visible = false;
+            // 
+            // btnKullaniciSil
+            // 
+            this.btnKullaniciSil.Location = new System.Drawing.Point(139, 144);
+            this.btnKullaniciSil.Name = "btnKullaniciSil";
+            this.btnKullaniciSil.Size = new System.Drawing.Size(91, 23);
+            this.btnKullaniciSil.TabIndex = 21;
+            this.btnKullaniciSil.Text = "Sil";
+            this.btnKullaniciSil.Visible = false;
+            // 
+            // btnKullaniciGuncelle
+            // 
+            this.btnKullaniciGuncelle.Location = new System.Drawing.Point(260, 144);
+            this.btnKullaniciGuncelle.Name = "btnKullaniciGuncelle";
+            this.btnKullaniciGuncelle.Size = new System.Drawing.Size(91, 23);
+            this.btnKullaniciGuncelle.TabIndex = 20;
+            this.btnKullaniciGuncelle.Text = "Güncelle";
+            this.btnKullaniciGuncelle.Visible = false;
+            // 
+            // txtKullaniciSifre
+            // 
+            this.txtKullaniciSifre.Location = new System.Drawing.Point(139, 92);
+            this.txtKullaniciSifre.Name = "txtKullaniciSifre";
+            this.txtKullaniciSifre.Size = new System.Drawing.Size(333, 20);
+            this.txtKullaniciSifre.TabIndex = 16;
+            // 
+            // btnKullaniciEkle
+            // 
+            this.btnKullaniciEkle.Location = new System.Drawing.Point(381, 144);
+            this.btnKullaniciEkle.Name = "btnKullaniciEkle";
+            this.btnKullaniciEkle.Size = new System.Drawing.Size(91, 23);
+            this.btnKullaniciEkle.TabIndex = 19;
+            this.btnKullaniciEkle.Text = "Ekle";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(61, 43);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(50, 13);
+            this.labelControl1.TabIndex = 11;
+            this.labelControl1.Text = "Ad Soyad:";
+            // 
+            // txtKullaniciEmail
+            // 
+            this.txtKullaniciEmail.Location = new System.Drawing.Point(139, 118);
+            this.txtKullaniciEmail.Name = "txtKullaniciEmail";
+            this.txtKullaniciEmail.Size = new System.Drawing.Size(333, 20);
+            this.txtKullaniciEmail.TabIndex = 18;
+            // 
+            // txtKullaniciAdSoyad
+            // 
+            this.txtKullaniciAdSoyad.Location = new System.Drawing.Point(139, 40);
+            this.txtKullaniciAdSoyad.Name = "txtKullaniciAdSoyad";
+            this.txtKullaniciAdSoyad.Size = new System.Drawing.Size(333, 20);
+            this.txtKullaniciAdSoyad.TabIndex = 12;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(61, 121);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(28, 13);
+            this.labelControl4.TabIndex = 17;
+            this.labelControl4.Text = "Email:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(61, 69);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(59, 13);
+            this.labelControl2.TabIndex = 13;
+            this.labelControl2.Text = "Kullanıcı Adı:";
+            // 
+            // txtKullaniciAdi
+            // 
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(139, 66);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(333, 20);
+            this.txtKullaniciAdi.TabIndex = 14;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(61, 95);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(26, 13);
+            this.labelControl3.TabIndex = 15;
+            this.labelControl3.Text = "Şifre:";
+            // 
+            // pnlIslemTurleri
+            // 
+            this.pnlIslemTurleri.Controls.Add(this.CmbIslemTurleri);
+            this.pnlIslemTurleri.Controls.Add(this.txtYeniIslemTuru);
+            this.pnlIslemTurleri.Controls.Add(this.btnIslemEkle);
+            this.pnlIslemTurleri.Controls.Add(this.btnIslemSil);
+            this.pnlIslemTurleri.Controls.Add(this.labelControl8);
+            this.pnlIslemTurleri.Controls.Add(this.labelControl7);
+            this.pnlIslemTurleri.Controls.Add(this.labelControl6);
+            this.pnlIslemTurleri.Controls.Add(this.labelControl5);
+            this.pnlIslemTurleri.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlIslemTurleri.Location = new System.Drawing.Point(0, 22);
+            this.pnlIslemTurleri.Name = "pnlIslemTurleri";
+            this.pnlIslemTurleri.Size = new System.Drawing.Size(848, 428);
+            this.pnlIslemTurleri.TabIndex = 22;
+            this.pnlIslemTurleri.Visible = false;
+            // 
+            // CmbIslemTurleri
+            // 
+            this.CmbIslemTurleri.Location = new System.Drawing.Point(190, 72);
+            this.CmbIslemTurleri.Name = "CmbIslemTurleri";
+            this.CmbIslemTurleri.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbIslemTurleri.Size = new System.Drawing.Size(174, 20);
+            this.CmbIslemTurleri.TabIndex = 30;
+            // 
+            // txtYeniIslemTuru
+            // 
+            this.txtYeniIslemTuru.Location = new System.Drawing.Point(190, 189);
+            this.txtYeniIslemTuru.MenuManager = this.barManager1;
+            this.txtYeniIslemTuru.Name = "txtYeniIslemTuru";
+            this.txtYeniIslemTuru.Size = new System.Drawing.Size(174, 20);
+            this.txtYeniIslemTuru.TabIndex = 29;
+            // 
+            // btnIslemEkle
+            // 
+            this.btnIslemEkle.Location = new System.Drawing.Point(370, 187);
+            this.btnIslemEkle.Name = "btnIslemEkle";
+            this.btnIslemEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnIslemEkle.TabIndex = 28;
+            this.btnIslemEkle.Text = "Ekle";
+            this.btnIslemEkle.UseVisualStyleBackColor = true;
+            this.btnIslemEkle.Click += new System.EventHandler(this.btnIslemEkle_Click);
+            // 
+            // btnIslemSil
+            // 
+            this.btnIslemSil.Location = new System.Drawing.Point(370, 69);
+            this.btnIslemSil.Name = "btnIslemSil";
+            this.btnIslemSil.Size = new System.Drawing.Size(75, 23);
+            this.btnIslemSil.TabIndex = 27;
+            this.btnIslemSil.Text = "Sil";
+            this.btnIslemSil.UseVisualStyleBackColor = true;
+            this.btnIslemSil.Click += new System.EventHandler(this.btnIslemSil_Click);
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(101, 192);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(73, 13);
+            this.labelControl8.TabIndex = 26;
+            this.labelControl8.Text = "Yeni İşlem Türü";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(34, 152);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(140, 13);
+            this.labelControl7.TabIndex = 25;
+            this.labelControl7.Text = "Siteme yeni işlem türü ekleme";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(106, 79);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(58, 13);
+            this.labelControl6.TabIndex = 24;
+            this.labelControl6.Text = "İşlem Türleri";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(22, 41);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(142, 13);
+            this.labelControl5.TabIndex = 23;
+            this.labelControl5.Text = "Sistemde var olan işlem türleri";
             // 
             // FrmKullanici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 450);
-            this.Controls.Add(this.grpKullaniciIslemleri);
+            this.Controls.Add(this.pnlIslemTurleri);
+            this.Controls.Add(this.pnlKullaniciIslemleri);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -641,19 +736,24 @@ namespace Banka_Otomasyonu
             this.Name = "FrmKullanici";
             this.Text = "Kullanici Formu";
             this.Load += new System.EventHandler(this.FrmKullanici_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdSoyad.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciEmail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciSifre.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpKullaniciIslemleri)).EndInit();
-            this.grpKullaniciIslemleri.ResumeLayout(false);
-            this.grpKullaniciIslemleri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlKullaniciIslemleri)).EndInit();
+            this.pnlKullaniciIslemleri.ResumeLayout(false);
+            this.pnlKullaniciIslemleri.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciSifre.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdSoyad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlIslemTurleri)).EndInit();
+            this.pnlIslemTurleri.ResumeLayout(false);
+            this.pnlIslemTurleri.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbIslemTurleri.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYeniIslemTuru.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -673,18 +773,6 @@ namespace Banka_Otomasyonu
         private DevExpress.XtraReports.UserDesigner.DesignControlContainer errorListDockPanel1_Container;
         private DevExpress.XtraReports.UserDesigner.GroupAndSortDockPanel groupAndSortDockPanel1;
         private DevExpress.XtraReports.UserDesigner.DesignControlContainer groupAndSortDockPanel1_Container;
-        private DevExpress.XtraEditors.GroupControl grpKullaniciIslemleri;
-        private DevExpress.XtraEditors.SimpleButton btnKullaniciSil;
-        private DevExpress.XtraEditors.SimpleButton btnKullaniciGuncelle;
-        private DevExpress.XtraEditors.TextEdit txtKullaniciSifre;
-        private DevExpress.XtraEditors.SimpleButton btnKullaniciEkle;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit txtKullaniciEmail;
-        private DevExpress.XtraEditors.TextEdit txtKullaniciAdSoyad;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit txtKullaniciAdi;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
@@ -721,5 +809,26 @@ namespace Banka_Otomasyonu
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit3;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit4;
         private DevExpress.XtraBars.BarButtonItem barYeniKullaniciEkle;
+        private DevExpress.XtraEditors.PanelControl pnlKullaniciIslemleri;
+        private DevExpress.XtraEditors.SimpleButton btnKullaniciSil;
+        private DevExpress.XtraEditors.SimpleButton btnKullaniciGuncelle;
+        private DevExpress.XtraEditors.TextEdit txtKullaniciSifre;
+        private DevExpress.XtraEditors.SimpleButton btnKullaniciEkle;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit txtKullaniciEmail;
+        private DevExpress.XtraEditors.TextEdit txtKullaniciAdSoyad;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.TextEdit txtKullaniciAdi;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.PanelControl pnlIslemTurleri;
+        private DevExpress.XtraEditors.TextEdit txtYeniIslemTuru;
+        private System.Windows.Forms.Button btnIslemEkle;
+        private System.Windows.Forms.Button btnIslemSil;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.ComboBoxEdit CmbIslemTurleri;
     }
 }
