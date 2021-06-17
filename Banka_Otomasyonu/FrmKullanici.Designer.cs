@@ -814,6 +814,8 @@ namespace Banka_Otomasyonu
             this.txtMusteriTelefon.Location = new System.Drawing.Point(104, 96);
             this.txtMusteriTelefon.MenuManager = this.barManager1;
             this.txtMusteriTelefon.Name = "txtMusteriTelefon";
+            this.txtMusteriTelefon.Properties.Mask.EditMask = "\\(\\d{3}\\)[0-9A-Z]{3}[0-9A-Z]{4}";
+            this.txtMusteriTelefon.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtMusteriTelefon.Size = new System.Drawing.Size(212, 20);
             this.txtMusteriTelefon.TabIndex = 19;
             // 
