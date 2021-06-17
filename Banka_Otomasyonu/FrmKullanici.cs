@@ -17,7 +17,9 @@ namespace Banka_Otomasyonu
         bool mukerrerDurum;//mukerrer kontrol kullanıcı
         bool aramaDurum; //arama butonu kontrol
         bool islemDurum; //işlem türü kontrol
-       
+        bool mukerrerMusteriDurum; //müşteri mükerrer kontrol
+        bool musteriaramaDurum; // müşteri arama kontrol     
+        bool mukerrerHesapDurum; // hesap numarsi mükerrer kontrol     
 
         private void FrmKullanici_Load(object sender, EventArgs e)
         {
@@ -80,6 +82,59 @@ namespace Banka_Otomasyonu
             else
             {
                 islemDurum = false;
+            }
+            bgl.baglanti().Close();
+        }
+
+        void musteriMukerrerKontrol()
+        {
+            SqlCommand komut = new SqlCommand("select * from Tbl_Musteriler where Musteri_Numarasi=@Musteri_Numarasi", bgl.baglanti());
+            komut.Parameters.AddWithValue("@Musteri_Numarasi", txtMusteriNumarasi.Text);
+            SqlDataReader dr = komut.ExecuteReader();
+
+            if (dr.Read())
+            {
+                mukerrerMusteriDurum = true;
+            }
+            else
+            {
+                mukerrerMusteriDurum = false;
+            }
+            bgl.baglanti().Close();
+        }
+
+
+        void hesaplarMukerrerKontrol()
+        {
+            SqlCommand komut = new SqlCommand("select * from Tbl_Hesaplar where Hesap_Numarasi=@Hesap_Numarasi", bgl.baglanti());
+            komut.Parameters.AddWithValue("@Hesap_Numarasi", cmbHesapNumaralari.Text);
+            SqlDataReader dr = komut.ExecuteReader();
+
+            if (dr.Read())
+            {
+                mukerrerHesapDurum = true;
+            }
+            else
+            {
+                mukerrerHesapDurum = false;
+            }
+            bgl.baglanti().Close();
+        }
+
+
+        void musteriAramaKayitlimi()
+        {
+            SqlCommand komut = new SqlCommand("select * from Tbl_Musteriler where Musteri_Numarasi=@Musteri_Numarasi", bgl.baglanti());
+            komut.Parameters.AddWithValue("@Musteri_Numarasi", barAramaTxt.EditValue);
+            SqlDataReader dr = komut.ExecuteReader();
+
+            if (dr.Read())
+            {
+                musteriaramaDurum = true;
+            }
+            else
+            {
+                musteriaramaDurum = false;
             }
             bgl.baglanti().Close();
         }
@@ -217,6 +272,7 @@ namespace Banka_Otomasyonu
             kullaniciAramaKayitlimi();
             if (aramaDurum == true)
             {
+                pnlMusteriHesapAc.Visible = false;
                 pnlIslemTurleri.Visible = false;
                 pnlKullaniciIslemleri.Visible = true;
                 btnKullaniciEkle.Visible = false;
@@ -260,6 +316,7 @@ namespace Banka_Otomasyonu
 
         private void btnYeniKullaniciEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            pnlMusteriHesapAc.Visible = false;
             pnlIslemTurleri.Visible = false;
             pnlKullaniciIslemleri.Visible = true;
             btnKullaniciEkle.Visible = true;
@@ -277,14 +334,25 @@ namespace Banka_Otomasyonu
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             pnlKullaniciIslemleri.Visible = false;
-            pnlIslemTurleri.Visible = true;
-           
-           
-            
+            pnlMusteriHesapAc.Visible = false;
+            pnlIslemTurleri.Visible = true;       
+
         }
 
         private void barMusteriYeniHesapAc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+        {           
+            pnlKullaniciIslemleri.Visible = false;
+            pnlIslemTurleri.Visible = false;
+            pnlMusteriHesapAc.Visible = true;
+            txtMusteriNumarasi.Enabled = true;
+
+            txtMusteriAd.Text = "";
+            txtMusteriSoyad.Text = "";
+            txtMusteriTelefon.Text = "";
+            txtMusteriEmail.Text = "";
+            rchMusteriAdres.Text = "";
+            txtMusteriNumarasi.Text = "";
+            cmbHesapNumaralari.Text = "";
 
         }
 
@@ -333,6 +401,234 @@ namespace Banka_Otomasyonu
                 IslemEkleKomutu.ExecuteNonQuery();
                 bgl.baglanti().Close();
                 XtraMessageBox.Show("İşlem Silme işlemi Başarılı");               
+        }
+
+        private void btnMusteriEkle_Click(object sender, EventArgs e)
+        {
+            //Tüm alanlarda girişi zorunlu tuttuk
+            if
+                (
+                string.IsNullOrEmpty(txtMusteriAd.Text) ||
+                string.IsNullOrEmpty(txtMusteriSoyad.Text) ||
+                string.IsNullOrEmpty(txtMusteriTelefon.Text) ||
+                string.IsNullOrEmpty(txtMusteriEmail.Text) ||
+                string.IsNullOrEmpty(rchMusteriAdres.Text) ||
+                string.IsNullOrEmpty(txtMusteriNumarasi.Text) 
+                )
+            {
+                MessageBox.Show("Lütfen Tüm Alanları eksiksiz doldurunuz");
+                return;
+            }
+
+            //musteri numarası 11 karakter olarak belirledik
+            if (txtMusteriNumarasi.Text.Length > 7 || txtMusteriNumarasi.Text.Length < 7)
+            {
+                MessageBox.Show("Müşteri Numarası 7 karakterden büyük veya küçük olamaz");
+                return;
+            }
+
+            //musteri cep telefonu 11 karakter olarak belirledik
+            if (txtMusteriTelefon.Text.Length > 11 || txtMusteriTelefon.Text.Length < 11)
+            {
+                MessageBox.Show("Müşteri Telefon Numarası 11 karakterden büyük veya küçük olamaz");
+                return;
+            }
+
+            musteriMukerrerKontrol();//mükerrer varmı kontrol et
+            if (mukerrerMusteriDurum == false) //yoksa kayit et
+            {
+                SqlCommand musteriEkleKomutu = new SqlCommand("insert into Tbl_Musteriler (Musteri_Ad,Musteri_Soyad,Musteri_Telefon,Musteri_Email,Musteri_Adres,Musteri_Numarasi) values(@Musteri_Ad,@Musteri_Soyad,@Musteri_Telefon,@Musteri_Email,@Musteri_Adres,@Musteri_Numarasi)", bgl.baglanti());
+                musteriEkleKomutu.Parameters.AddWithValue("@Musteri_Ad", txtMusteriAd.Text);
+                musteriEkleKomutu.Parameters.AddWithValue("@Musteri_Soyad", txtMusteriSoyad.Text);
+                musteriEkleKomutu.Parameters.AddWithValue("@Musteri_Telefon", txtMusteriTelefon.Text);
+                musteriEkleKomutu.Parameters.AddWithValue("@Musteri_Email", txtMusteriEmail.Text);
+                musteriEkleKomutu.Parameters.AddWithValue("@Musteri_Adres", rchMusteriAdres.Text);
+                musteriEkleKomutu.Parameters.AddWithValue("@Musteri_Numarasi", txtMusteriNumarasi.Text);
+                musteriEkleKomutu.ExecuteNonQuery();
+                bgl.baglanti().Close();
+                XtraMessageBox.Show("Müşteri Ekleme İşlemi Başarılı");
+            }
+
+            else
+            {
+                XtraMessageBox.Show("Kayıtlı Müşteri Numarası tekrar deneyiniz");
+            }
+        }
+
+        private void barMusteriBilgiGetir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //Tüm alanlarda girişi zorunlu tuttuk
+            //if (barAramaTxt.EditValue == null )
+            //{
+            //    MessageBox.Show("Lütfen Arama Kutusunu Doldurunuz");
+            //    return;
+            //}
+            if (string.IsNullOrEmpty(barAramaTxt.EditValue?.ToString()))
+            {
+                MessageBox.Show("Lütfen Arama Kutusunu Doldurunuz");
+                return;
+            }
+
+
+            musteriAramaKayitlimi();
+            if (musteriaramaDurum == true)
+            {
+                pnlMusteriHesapAc.Visible = true;
+                pnlIslemTurleri.Visible = false;
+                pnlKullaniciIslemleri.Visible = false;               
+                txtMusteriNumarasi.Enabled = false;
+
+                SqlCommand musteriAramaKomutu = new SqlCommand(
+                   "Select * from Tbl_Musteriler where Musteri_Numarasi = @Musteri_Numarasi", bgl.baglanti());
+                musteriAramaKomutu.Parameters.AddWithValue("@Musteri_Numarasi", barAramaTxt.EditValue);
+
+                SqlDataReader musteriVerisiniOku = musteriAramaKomutu.ExecuteReader();
+
+                while (musteriVerisiniOku.Read())
+                {
+                    txtMusteriAd.Text = musteriVerisiniOku[1].ToString();
+                    txtMusteriSoyad.Text = musteriVerisiniOku[2].ToString();
+                    txtMusteriTelefon.Text = musteriVerisiniOku[3].ToString();
+                    txtMusteriEmail.Text = musteriVerisiniOku[4].ToString();
+                    rchMusteriAdres.Text = musteriVerisiniOku[5].ToString();
+                    txtMusteriNumarasi.Text = musteriVerisiniOku[6].ToString();
+                }
+
+                bgl.baglanti().Close();
+            }
+
+            else
+            {
+                XtraMessageBox.Show("Lütfen kayıtlı müşteri numarası giriniz adı giriniz");
+                pnlMusteriHesapAc.Visible = false;
+            }
+        }
+
+        private void btnMusteriGuncelle_Click(object sender, EventArgs e)
+        {
+            //Tüm alanlarda girişi zorunlu tuttuk
+            if
+                (
+                string.IsNullOrEmpty(txtMusteriAd.Text) ||
+                string.IsNullOrEmpty(txtMusteriSoyad.Text) ||
+                string.IsNullOrEmpty(txtMusteriTelefon.Text) ||
+                string.IsNullOrEmpty(txtMusteriEmail.Text) ||
+                string.IsNullOrEmpty(rchMusteriAdres.Text) ||
+                string.IsNullOrEmpty(txtMusteriNumarasi.Text)
+                )
+            {
+                MessageBox.Show("Lütfen Tüm Alanları eksiksiz doldurunuz");
+                return;
+            }
+
+            //musteri numarası 11 karakter olarak belirledik
+            if (txtMusteriNumarasi.Text.Length > 7 || txtMusteriNumarasi.Text.Length < 7)
+            {
+                MessageBox.Show("Müşteri Numarası 7 karakterden büyük veya küçük olamaz");
+                return;
+            }
+
+            //musteri cep telefonu 11 karakter olarak belirledik
+            if (txtMusteriTelefon.Text.Length > 11 || txtMusteriTelefon.Text.Length < 11)
+            {
+                MessageBox.Show("Müşteri Telefon Numarası 11 karakterden büyük veya küçük olamaz");
+                return;
+            }
+           
+                SqlCommand musteriGuncellemeKomutu = new SqlCommand("UPDATE Tbl_Musteriler SET Musteri_Ad=@Musteri_Ad,Musteri_Soyad=@Musteri_Soyad,Musteri_Telefon=@Musteri_Telefon,Musteri_Email=@Musteri_Email,Musteri_Adres=@Musteri_Adres WHERE Musteri_Numarasi=@Musteri_Numarasi", bgl.baglanti());
+                musteriGuncellemeKomutu.Parameters.AddWithValue("@Musteri_Ad", txtMusteriAd.Text);
+                musteriGuncellemeKomutu.Parameters.AddWithValue("@Musteri_Soyad", txtMusteriSoyad.Text);
+                musteriGuncellemeKomutu.Parameters.AddWithValue("@Musteri_Telefon", txtMusteriTelefon.Text);
+                musteriGuncellemeKomutu.Parameters.AddWithValue("@Musteri_Email", txtMusteriEmail.Text);
+                musteriGuncellemeKomutu.Parameters.AddWithValue("@Musteri_Adres", rchMusteriAdres.Text);
+                musteriGuncellemeKomutu.Parameters.AddWithValue("@Musteri_Numarasi", txtMusteriNumarasi.Text);
+                musteriGuncellemeKomutu.ExecuteNonQuery();
+                bgl.baglanti().Close();
+                XtraMessageBox.Show("Müşteri Güncelleme İşlemi Başarılı");            
+        }
+
+        private void btnHesaplariGetir_Click(object sender, EventArgs e)
+        {
+
+            //Tüm alanlarda girişi zorunlu tuttuk
+            if
+                (
+                string.IsNullOrEmpty(txtMusteriNumarasi.Text)                
+                )
+            {
+                MessageBox.Show("Lütfen Müşteri Numarası alanını doldurunuz");
+                return;
+            }
+
+            //cmbHesapNumaralari.Items.Clear(); //hesapları getire basınca önce buton içindekileri temizleyecek
+            cmbHesapNumaralari.Properties.Items.Clear();
+            cmbHesapNumaralari.Text = "";
+
+            //müşterinin hesaplarını listeledik
+            SqlCommand musteriHesapListelemeKomutu = new SqlCommand("Select Hesap_Numarasi From Tbl_Hesaplar where Musteri_Numarasi=@Musteri_Numarasi", bgl.baglanti());
+            musteriHesapListelemeKomutu.Parameters.AddWithValue("Musteri_Numarasi",txtMusteriNumarasi.Text);
+            //musteriHesapListelemeKomutu.ExecuteNonQuery();
+            SqlDataReader musteriHesapOku = musteriHesapListelemeKomutu.ExecuteReader();
+            while (musteriHesapOku.Read())
+            {
+                cmbHesapNumaralari.Properties.Items.Add(musteriHesapOku[0]);
+            }
+            bgl.baglanti().Close();
+        }
+
+        private void btnHesapSil_Click(object sender, EventArgs e)
+        {
+            if
+               (
+               string.IsNullOrEmpty(txtMusteriNumarasi.Text) ||
+                string.IsNullOrEmpty(cmbHesapNumaralari.Text)
+               )
+            {
+                MessageBox.Show("Lütfen Müşteri Numarası veya Hesap Numarası alanlarını doldurunuz");
+                return;
+            }
+
+            SqlCommand musteriSilmeKomutu = new SqlCommand("DELETE FROM Tbl_Hesaplar WHERE Hesap_Numarasi=@Hesap_Numarasi", bgl.baglanti());
+            musteriSilmeKomutu.Parameters.AddWithValue("@Hesap_Numarasi", cmbHesapNumaralari.Text);
+            musteriSilmeKomutu.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            XtraMessageBox.Show("Hesap Silme İşlemi Başarılı");
+            cmbHesapNumaralari.Properties.Items.Clear(); //bosalt hesapnumaralarini
+            cmbHesapNumaralari.Text = "";
+        }
+
+        private void btnHesapAc_Click(object sender, EventArgs e)
+        {
+            if
+              (
+              string.IsNullOrEmpty(txtMusteriNumarasi.Text) ||
+               string.IsNullOrEmpty(cmbHesapNumaralari.Text)
+              )
+            {
+                MessageBox.Show("Lütfen Müşteri Numarası veya Hesap Numarası alanlarını doldurunuz");
+                return;
+            }
+
+            hesaplarMukerrerKontrol();
+            if (mukerrerHesapDurum == false)
+            {
+                SqlCommand musteriEklemeKomutu = new SqlCommand("INSERT INTO Tbl_Hesaplar (Musteri_Numarasi,Hesap_Numarasi,Hesap_Bakiyesi,Hesap_KulBakiye) VALUES (@Musteri_Numarasi,@Hesap_Numarasi,@Hesap_Bakiyesi,@Hesap_KulBakiye)", bgl.baglanti());
+                musteriEklemeKomutu.Parameters.AddWithValue("@Musteri_Numarasi", txtMusteriNumarasi.Text);
+                musteriEklemeKomutu.Parameters.AddWithValue("@Hesap_Numarasi", cmbHesapNumaralari.Text);
+                musteriEklemeKomutu.Parameters.AddWithValue("@Hesap_Bakiyesi", 0);
+                musteriEklemeKomutu.Parameters.AddWithValue("@Hesap_KulBakiye", 0);
+                musteriEklemeKomutu.ExecuteNonQuery();
+                bgl.baglanti().Close();
+                XtraMessageBox.Show("Hesap Ekleme İşlemi Başarılı");
+                cmbHesapNumaralari.Properties.Items.Clear(); //bosalt hesapnumaralarini
+                cmbHesapNumaralari.Text = "";
+            }           
+
+            else
+            {
+                XtraMessageBox.Show("Hesap Numarası sisteme kayıtlıdır lütfen farklı hesap numarası giriniz");
+            }
+
         }
     }
 }

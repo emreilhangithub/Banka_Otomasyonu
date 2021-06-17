@@ -100,6 +100,26 @@ namespace Banka_Otomasyonu
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.pnlMusteriHesapAc = new DevExpress.XtraEditors.PanelControl();
+            this.cmbHesapNumaralari = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtMusteriNumarasi = new DevExpress.XtraEditors.TextEdit();
+            this.rchMusteriAdres = new DevExpress.XtraRichEdit.RichEditControl();
+            this.txtMusteriEmail = new DevExpress.XtraEditors.TextEdit();
+            this.txtMusteriTelefon = new DevExpress.XtraEditors.TextEdit();
+            this.txtMusteriSoyad = new DevExpress.XtraEditors.TextEdit();
+            this.txtMusteriAd = new DevExpress.XtraEditors.TextEdit();
+            this.btnMusteriGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.btnMusteriEkle = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHesapSil = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHesaplariGetir = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHesapAc = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
@@ -116,6 +136,14 @@ namespace Banka_Otomasyonu
             this.pnlIslemTurleri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CmbIslemTurleri.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYeniIslemTuru.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlMusteriHesapAc)).BeginInit();
+            this.pnlMusteriHesapAc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbHesapNumaralari.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriNumarasi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriTelefon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriSoyad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriAd.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContainer3
@@ -427,6 +455,7 @@ namespace Banka_Otomasyonu
             this.barMusteriBilgiGetir.Caption = "Müşteri";
             this.barMusteriBilgiGetir.Id = 13;
             this.barMusteriBilgiGetir.Name = "barMusteriBilgiGetir";
+            this.barMusteriBilgiGetir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barMusteriBilgiGetir_ItemClick);
             // 
             // barDockControl1
             // 
@@ -718,11 +747,199 @@ namespace Banka_Otomasyonu
             this.labelControl5.TabIndex = 23;
             this.labelControl5.Text = "Sistemde var olan işlem türleri";
             // 
+            // pnlMusteriHesapAc
+            // 
+            this.pnlMusteriHesapAc.Controls.Add(this.cmbHesapNumaralari);
+            this.pnlMusteriHesapAc.Controls.Add(this.txtMusteriNumarasi);
+            this.pnlMusteriHesapAc.Controls.Add(this.rchMusteriAdres);
+            this.pnlMusteriHesapAc.Controls.Add(this.txtMusteriEmail);
+            this.pnlMusteriHesapAc.Controls.Add(this.txtMusteriTelefon);
+            this.pnlMusteriHesapAc.Controls.Add(this.txtMusteriSoyad);
+            this.pnlMusteriHesapAc.Controls.Add(this.txtMusteriAd);
+            this.pnlMusteriHesapAc.Controls.Add(this.btnMusteriGuncelle);
+            this.pnlMusteriHesapAc.Controls.Add(this.btnMusteriEkle);
+            this.pnlMusteriHesapAc.Controls.Add(this.btnHesapSil);
+            this.pnlMusteriHesapAc.Controls.Add(this.btnHesaplariGetir);
+            this.pnlMusteriHesapAc.Controls.Add(this.btnHesapAc);
+            this.pnlMusteriHesapAc.Controls.Add(this.labelControl15);
+            this.pnlMusteriHesapAc.Controls.Add(this.labelControl14);
+            this.pnlMusteriHesapAc.Controls.Add(this.labelControl13);
+            this.pnlMusteriHesapAc.Controls.Add(this.labelControl12);
+            this.pnlMusteriHesapAc.Controls.Add(this.labelControl11);
+            this.pnlMusteriHesapAc.Controls.Add(this.labelControl10);
+            this.pnlMusteriHesapAc.Controls.Add(this.labelControl9);
+            this.pnlMusteriHesapAc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMusteriHesapAc.Location = new System.Drawing.Point(0, 22);
+            this.pnlMusteriHesapAc.Name = "pnlMusteriHesapAc";
+            this.pnlMusteriHesapAc.Size = new System.Drawing.Size(848, 428);
+            this.pnlMusteriHesapAc.TabIndex = 31;
+            this.pnlMusteriHesapAc.Visible = false;
+            // 
+            // cmbHesapNumaralari
+            // 
+            this.cmbHesapNumaralari.Location = new System.Drawing.Point(620, 71);
+            this.cmbHesapNumaralari.MenuManager = this.barManager1;
+            this.cmbHesapNumaralari.Name = "cmbHesapNumaralari";
+            this.cmbHesapNumaralari.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbHesapNumaralari.Size = new System.Drawing.Size(212, 20);
+            this.cmbHesapNumaralari.TabIndex = 23;
+            // 
+            // txtMusteriNumarasi
+            // 
+            this.txtMusteriNumarasi.Location = new System.Drawing.Point(620, 32);
+            this.txtMusteriNumarasi.MenuManager = this.barManager1;
+            this.txtMusteriNumarasi.Name = "txtMusteriNumarasi";
+            this.txtMusteriNumarasi.Size = new System.Drawing.Size(212, 20);
+            this.txtMusteriNumarasi.TabIndex = 22;
+            // 
+            // rchMusteriAdres
+            // 
+            this.rchMusteriAdres.Location = new System.Drawing.Point(104, 152);
+            this.rchMusteriAdres.MenuManager = this.barManager1;
+            this.rchMusteriAdres.Name = "rchMusteriAdres";
+            this.rchMusteriAdres.Size = new System.Drawing.Size(212, 236);
+            this.rchMusteriAdres.TabIndex = 21;
+            // 
+            // txtMusteriEmail
+            // 
+            this.txtMusteriEmail.Location = new System.Drawing.Point(104, 124);
+            this.txtMusteriEmail.MenuManager = this.barManager1;
+            this.txtMusteriEmail.Name = "txtMusteriEmail";
+            this.txtMusteriEmail.Size = new System.Drawing.Size(212, 20);
+            this.txtMusteriEmail.TabIndex = 20;
+            // 
+            // txtMusteriTelefon
+            // 
+            this.txtMusteriTelefon.Location = new System.Drawing.Point(104, 96);
+            this.txtMusteriTelefon.MenuManager = this.barManager1;
+            this.txtMusteriTelefon.Name = "txtMusteriTelefon";
+            this.txtMusteriTelefon.Size = new System.Drawing.Size(212, 20);
+            this.txtMusteriTelefon.TabIndex = 19;
+            // 
+            // txtMusteriSoyad
+            // 
+            this.txtMusteriSoyad.Location = new System.Drawing.Point(104, 64);
+            this.txtMusteriSoyad.MenuManager = this.barManager1;
+            this.txtMusteriSoyad.Name = "txtMusteriSoyad";
+            this.txtMusteriSoyad.Size = new System.Drawing.Size(212, 20);
+            this.txtMusteriSoyad.TabIndex = 18;
+            // 
+            // txtMusteriAd
+            // 
+            this.txtMusteriAd.Location = new System.Drawing.Point(104, 34);
+            this.txtMusteriAd.MenuManager = this.barManager1;
+            this.txtMusteriAd.Name = "txtMusteriAd";
+            this.txtMusteriAd.Size = new System.Drawing.Size(212, 20);
+            this.txtMusteriAd.TabIndex = 17;
+            // 
+            // btnMusteriGuncelle
+            // 
+            this.btnMusteriGuncelle.Location = new System.Drawing.Point(670, 325);
+            this.btnMusteriGuncelle.Name = "btnMusteriGuncelle";
+            this.btnMusteriGuncelle.Size = new System.Drawing.Size(124, 23);
+            this.btnMusteriGuncelle.TabIndex = 16;
+            this.btnMusteriGuncelle.Text = "Müşteri Güncelle";
+            this.btnMusteriGuncelle.Click += new System.EventHandler(this.btnMusteriGuncelle_Click);
+            // 
+            // btnMusteriEkle
+            // 
+            this.btnMusteriEkle.Location = new System.Drawing.Point(522, 325);
+            this.btnMusteriEkle.Name = "btnMusteriEkle";
+            this.btnMusteriEkle.Size = new System.Drawing.Size(124, 23);
+            this.btnMusteriEkle.TabIndex = 15;
+            this.btnMusteriEkle.Text = "Müşteri Ekle";
+            this.btnMusteriEkle.Click += new System.EventHandler(this.btnMusteriEkle_Click);
+            // 
+            // btnHesapSil
+            // 
+            this.btnHesapSil.Location = new System.Drawing.Point(719, 277);
+            this.btnHesapSil.Name = "btnHesapSil";
+            this.btnHesapSil.Size = new System.Drawing.Size(75, 23);
+            this.btnHesapSil.TabIndex = 14;
+            this.btnHesapSil.Text = "Hesap Sil";
+            this.btnHesapSil.Click += new System.EventHandler(this.btnHesapSil_Click);
+            // 
+            // btnHesaplariGetir
+            // 
+            this.btnHesaplariGetir.Location = new System.Drawing.Point(620, 277);
+            this.btnHesaplariGetir.Name = "btnHesaplariGetir";
+            this.btnHesaplariGetir.Size = new System.Drawing.Size(75, 23);
+            this.btnHesaplariGetir.TabIndex = 13;
+            this.btnHesaplariGetir.Text = "Hesaplar Getir";
+            this.btnHesaplariGetir.Click += new System.EventHandler(this.btnHesaplariGetir_Click);
+            // 
+            // btnHesapAc
+            // 
+            this.btnHesapAc.Location = new System.Drawing.Point(522, 277);
+            this.btnHesapAc.Name = "btnHesapAc";
+            this.btnHesapAc.Size = new System.Drawing.Size(75, 23);
+            this.btnHesapAc.TabIndex = 12;
+            this.btnHesapAc.Text = "Hesap Aç";
+            this.btnHesapAc.Click += new System.EventHandler(this.btnHesapAc_Click);
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Location = new System.Drawing.Point(548, 77);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(46, 13);
+            this.labelControl15.TabIndex = 6;
+            this.labelControl15.Text = "Hesap No";
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Location = new System.Drawing.Point(548, 39);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(51, 13);
+            this.labelControl14.TabIndex = 5;
+            this.labelControl14.Text = "Musteri No";
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Location = new System.Drawing.Point(59, 152);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(32, 13);
+            this.labelControl13.TabIndex = 4;
+            this.labelControl13.Text = "Adres:";
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(30, 123);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(61, 13);
+            this.labelControl12.TabIndex = 3;
+            this.labelControl12.Text = "Email Adresi:";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Location = new System.Drawing.Point(23, 96);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(68, 13);
+            this.labelControl11.TabIndex = 2;
+            this.labelControl11.Text = "Cep Telefonu:";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(57, 67);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(34, 13);
+            this.labelControl10.TabIndex = 1;
+            this.labelControl10.Text = "Soyad:";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(74, 39);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(17, 13);
+            this.labelControl9.TabIndex = 0;
+            this.labelControl9.Text = "Ad:";
+            // 
             // FrmKullanici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 450);
+            this.Controls.Add(this.pnlMusteriHesapAc);
             this.Controls.Add(this.pnlIslemTurleri);
             this.Controls.Add(this.pnlKullaniciIslemleri);
             this.Controls.Add(this.barDockControlLeft);
@@ -754,6 +971,15 @@ namespace Banka_Otomasyonu
             this.pnlIslemTurleri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CmbIslemTurleri.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYeniIslemTuru.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlMusteriHesapAc)).EndInit();
+            this.pnlMusteriHesapAc.ResumeLayout(false);
+            this.pnlMusteriHesapAc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbHesapNumaralari.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriNumarasi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriTelefon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriSoyad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMusteriAd.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -830,5 +1056,25 @@ namespace Banka_Otomasyonu
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.ComboBoxEdit CmbIslemTurleri;
+        private DevExpress.XtraEditors.PanelControl pnlMusteriHesapAc;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.SimpleButton btnMusteriGuncelle;
+        private DevExpress.XtraEditors.SimpleButton btnMusteriEkle;
+        private DevExpress.XtraEditors.SimpleButton btnHesapSil;
+        private DevExpress.XtraEditors.SimpleButton btnHesaplariGetir;
+        private DevExpress.XtraEditors.SimpleButton btnHesapAc;
+        private DevExpress.XtraRichEdit.RichEditControl rchMusteriAdres;
+        private DevExpress.XtraEditors.TextEdit txtMusteriEmail;
+        private DevExpress.XtraEditors.TextEdit txtMusteriTelefon;
+        private DevExpress.XtraEditors.TextEdit txtMusteriSoyad;
+        private DevExpress.XtraEditors.TextEdit txtMusteriAd;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbHesapNumaralari;
+        private DevExpress.XtraEditors.TextEdit txtMusteriNumarasi;
     }
 }
