@@ -51,14 +51,14 @@ Gönderdiği kişinin bakiyesi artacaktır.
 ![MusteriHavaleYatirildi](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/MusteriHavaleYatirildi.png)
 
 ### Müşteri Hesap Özeti Ekranı
-1)Seçilen bir hesap için belirtilen tarih aralığında hesap özeti görüntülenecektir. Çekilen, yatırılan, havale yapılmışsa kime yapıldığı ve miktarı, 
+Seçilen bir hesap için belirtilen tarih aralığında hesap özeti görüntülenecektir. Çekilen, yatırılan, havale yapılmışsa kime yapıldığı ve miktarı, 
 başka bir hesaptan havale para geldiyse kimden geldiği ve miktarı gibi bilgiler ve bu işlemlerin tarihleri görütüleniyor.
 
 
 ![MusteriHesapOzet](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/MusteriHesapOzet.png)
 
 ### Müşteri Döviz Kuru Ekranı
-1)Müşteri kur hesaplarını bu ekrandan yapacak şuanlık günlük dövüz kurlarını çekmedim talep olmadığı için.
+Müşteri kur hesaplarını bu ekrandan yapacak şuanlık günlük dövüz kurlarını çekmedim talep olmadığı için.
 ![MusteriDovizKuru](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/MusteriDovizKuru.png)
 
 ### Kullanıcı Giriş Ekranı
@@ -66,11 +66,15 @@ Kullanıcı bilgilerini doldurarak giriş yapabilir.
 ![KullaniciGiris](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/KullaniciGiris.png)
 
 ### Kullanici Şifre Unuttum Ekranı
-Kullanıcı giriş yaparken şifresini unutursa şifre mi unuttum butonuna bastıktan sonra Kullanıcı sistemde kayıtlı mail adresini yazar.
+1)Kullanıcı giriş yaparken şifresini unutursa şifre mi unuttum butonuna bastıktan sonra Kullanıcı sistemde kayıtlı mail adresini yazar.
+
+
 ![KullaniciSifremiUnuttum](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/KullaniciSifremiUnuttum.png)
-Kullanının şifresi kayıtlı mail adresine gider.
+2)Kullanının şifresi kayıtlı mail adresine gider.
 ![KullaniciSifremiUnuttumMail](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/KullaniciSifremiUnuttumMail.png)
-Örnek gelen bir şifre maili
+
+
+3)Kullanıcıy örnek gelen şifremi unuttum maili
 ![KullaniciSifremiUnuttumMailGeldi](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/KullaniciSifremiUnuttumMailGeldi.png)
 
 ### Kullanici Paneli
@@ -93,7 +97,7 @@ Kullanıcı müşteri numarasını yazdıktan sonra sistemde kayıtlı hesaplar�
 Kullanıcı hesabını kapatmaya yarar. Burada hesap kapatabilmek için hesabında para olmaması gerekmektedir yani bakiye 0 olması gerekiyor.
 ![HesapSil](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/HesapSil.png)
 
-### Hesap Ekleme-Güncelleme
+### Müşteri Ekleme-Güncelleme
 Kullanıcının yeni müşteri eklemesini sağlar ve var olan müşteriyi güncellemeyi sağlar.
 ![MusteriEkleGuncelle](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/MusteriEkleGuncelle.png)
 
