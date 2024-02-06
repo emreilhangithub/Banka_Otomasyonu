@@ -5,7 +5,7 @@
 *Bu projede **.Net** kullanarak DevExpress ile banka otomasyonu oluşturdum. CRUD operasyonları için ado.net disconnect mimari kullanıldım.*
 
 # Database Yedeği #
-Databse kısmına aşşağıdan ulaşıp kendinize yükleyebilirsiniz. https://github.com/emreilhangithub/Banka_Otomasyonu/tree/main/database
+Databse kısmına aşşağıdan ulaşıp kendinize yükleyebilirsiniz. https://github.com/emreilhangithub/Banka_Otomasyonu/tree/master/database
 
 # Proje İçeriği #
 
