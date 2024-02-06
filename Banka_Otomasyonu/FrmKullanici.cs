@@ -588,6 +588,30 @@ namespace Banka_Otomasyonu
                 return;
             }
 
+            //müşterinin hesaplarını listeledik
+            SqlCommand musteriHesapListelemeKomutu = new SqlCommand("Select Hesap_Bakiyesi From Tbl_Hesaplar where Hesap_Numarasi=@Hesap_Numarasi", bgl.baglanti());
+            musteriHesapListelemeKomutu.Parameters.AddWithValue("Hesap_Numarasi", cmbHesapNumaralari.Text);
+            SqlDataReader musteriHesapListelemeOku = musteriHesapListelemeKomutu.ExecuteReader();
+
+            // Veriyi okuma işlemi
+            if (musteriHesapListelemeOku.Read())
+            {
+                // Hesap bakiyesini alabilirsiniz
+                decimal hesapBakiyesi = musteriHesapListelemeOku.GetDecimal(0);
+                if (hesapBakiyesi > 0)
+                {
+                    // İşlemleri gerçekleştirin...
+                    XtraMessageBox.Show("Hesap Bakiyesi 0 dan büyük ise hesap kapatılamaz Hesap Bakiyesi : " + hesapBakiyesi);
+                    return;
+                }
+            }
+            else
+            {
+                XtraMessageBox.Show(" Belirtilen hesap numarasına ait kayıt bulunamadı !!!");
+                return;
+            }
+            bgl.baglanti().Close();
+
             SqlCommand musteriSilmeKomutu = new SqlCommand("DELETE FROM Tbl_Hesaplar WHERE Hesap_Numarasi=@Hesap_Numarasi", bgl.baglanti());
             musteriSilmeKomutu.Parameters.AddWithValue("@Hesap_Numarasi", cmbHesapNumaralari.Text);
             musteriSilmeKomutu.ExecuteNonQuery();
@@ -628,6 +652,11 @@ namespace Banka_Otomasyonu
             {
                 XtraMessageBox.Show("Hesap Numarası sisteme kayıtlıdır lütfen farklı hesap numarası giriniz");
             }
+
+        }
+
+        private void barBankaRapor_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
 
         }
     }

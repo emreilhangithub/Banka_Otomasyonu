@@ -277,7 +277,7 @@ namespace Banka_Otomasyonu
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 22);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 20);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Size = new System.Drawing.Size(848, 0);
             // 
@@ -293,17 +293,17 @@ namespace Banka_Otomasyonu
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 22);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 20);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 428);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 430);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(848, 22);
+            this.barDockControlRight.Location = new System.Drawing.Point(848, 20);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 428);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 430);
             // 
             // barButtonItem1
             // 
@@ -414,6 +414,7 @@ namespace Banka_Otomasyonu
             this.barBankaRapor.Caption = "Banka Rapor";
             this.barBankaRapor.Id = 6;
             this.barBankaRapor.Name = "barBankaRapor";
+            this.barBankaRapor.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBankaRapor_ItemClick);
             // 
             // barIslemTuru
             // 
@@ -463,7 +464,7 @@ namespace Banka_Otomasyonu
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
             this.barDockControl1.Manager = this.barManager2;
-            this.barDockControl1.Size = new System.Drawing.Size(848, 22);
+            this.barDockControl1.Size = new System.Drawing.Size(848, 20);
             // 
             // barDockControl2
             // 
@@ -477,17 +478,17 @@ namespace Banka_Otomasyonu
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl3.Location = new System.Drawing.Point(0, 22);
+            this.barDockControl3.Location = new System.Drawing.Point(0, 20);
             this.barDockControl3.Manager = this.barManager2;
-            this.barDockControl3.Size = new System.Drawing.Size(0, 428);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 430);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(848, 22);
+            this.barDockControl4.Location = new System.Drawing.Point(848, 20);
             this.barDockControl4.Manager = this.barManager2;
-            this.barDockControl4.Size = new System.Drawing.Size(0, 428);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 430);
             // 
             // barButtonItem3
             // 
@@ -569,9 +570,9 @@ namespace Banka_Otomasyonu
             this.pnlKullaniciIslemleri.Controls.Add(this.txtKullaniciAdi);
             this.pnlKullaniciIslemleri.Controls.Add(this.labelControl3);
             this.pnlKullaniciIslemleri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlKullaniciIslemleri.Location = new System.Drawing.Point(0, 22);
+            this.pnlKullaniciIslemleri.Location = new System.Drawing.Point(0, 20);
             this.pnlKullaniciIslemleri.Name = "pnlKullaniciIslemleri";
-            this.pnlKullaniciIslemleri.Size = new System.Drawing.Size(848, 428);
+            this.pnlKullaniciIslemleri.Size = new System.Drawing.Size(848, 430);
             this.pnlKullaniciIslemleri.TabIndex = 18;
             this.pnlKullaniciIslemleri.Visible = false;
             // 
@@ -672,9 +673,9 @@ namespace Banka_Otomasyonu
             this.pnlIslemTurleri.Controls.Add(this.labelControl6);
             this.pnlIslemTurleri.Controls.Add(this.labelControl5);
             this.pnlIslemTurleri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlIslemTurleri.Location = new System.Drawing.Point(0, 22);
+            this.pnlIslemTurleri.Location = new System.Drawing.Point(0, 20);
             this.pnlIslemTurleri.Name = "pnlIslemTurleri";
-            this.pnlIslemTurleri.Size = new System.Drawing.Size(848, 428);
+            this.pnlIslemTurleri.Size = new System.Drawing.Size(848, 430);
             this.pnlIslemTurleri.TabIndex = 22;
             this.pnlIslemTurleri.Visible = false;
             // 
@@ -769,9 +770,9 @@ namespace Banka_Otomasyonu
             this.pnlMusteriHesapAc.Controls.Add(this.labelControl10);
             this.pnlMusteriHesapAc.Controls.Add(this.labelControl9);
             this.pnlMusteriHesapAc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMusteriHesapAc.Location = new System.Drawing.Point(0, 22);
+            this.pnlMusteriHesapAc.Location = new System.Drawing.Point(0, 20);
             this.pnlMusteriHesapAc.Name = "pnlMusteriHesapAc";
-            this.pnlMusteriHesapAc.Size = new System.Drawing.Size(848, 428);
+            this.pnlMusteriHesapAc.Size = new System.Drawing.Size(848, 430);
             this.pnlMusteriHesapAc.TabIndex = 31;
             this.pnlMusteriHesapAc.Visible = false;
             // 
