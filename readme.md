@@ -74,7 +74,7 @@ Kullanıcı bilgilerini doldurarak giriş yapabilir.
 ![KullaniciSifremiUnuttumMail](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/KullaniciSifremiUnuttumMail.png)
 
 
-3)Kullanıcıy örnek gelen şifremi unuttum maili
+3)Kullanıcıya örnek gelen şifremi unuttum maili.
 ![KullaniciSifremiUnuttumMailGeldi](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/KullaniciSifremiUnuttumMailGeldi.png)
 
 ### Kullanici Paneli
