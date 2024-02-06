@@ -33,12 +33,22 @@ Yatırılan tutar kadar bakiyesi artacaktır.
 ![MusteriParaYatir](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/MusteriParaYatir.png)
 
 ### Müşteri Havale Yapma Ekranı
-1)Müşteri havale yapma ekranından gönreceği hesabı seçer 2)Paranın yatırılacağı hesap numarasını girer 3)Aktarmak istediği tutarı girer.
-Havale et butonuna basınca hesap gerçekteden var ise vede bakiye yeterli ise bu havale işlemi gerçekleştirilir.
-4)Havale tutarı kadar miktar kendi hesabının bakiyesinden eksilir 5) Gönderdiği kişinin bakiyesi artacaktır
+1)Müşteri havale yapma ekranından para göndereceği hesabı seçer kırmızı ile işaretli hesabı seçtik.
+Yeşil ile seçili olan paranın yatırlalacağı hesap bunu sadece bakiyeyi görmek için ekran görüntüsü aldım.
 
 
-![MusteriHavale](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/MusteriHavale.png)
+![MusteriHavaleHesapSec](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/MusteriHavaleHesapSec.png)
+
+
+2)Paranın yatırılacağı hesap numarasını ve aktarmak istediği tutarı girer.
+Havale et butonuna basınca para havale edilecek hesap var ise ve parayı gönderecek hesap bakiyesi yeterli ise bu havale işlemi gerçekleştirilir.
+
+
+![MusteriHavaleYatirilacakHesapSec](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/MusteriHavaleYatirilacakHesapSec.png)
+
+3)Havale tutarı kadar miktar kendi hesabının bakiyesinden eksilir.
+Gönderdiği kişinin bakiyesi artacaktır.
+![MusteriHavaleYatirildi](https://github.com/emreilhangithub/Banka_Otomasyonu/blob/master/images/MusteriHavaleYatirildi.png)
 
 ### Müşteri Hesap Özeti Ekranı
 1)Seçilen bir hesap için belirtilen tarih aralığında hesap özeti görüntülenecektir. Çekilen, yatırılan, havale yapılmışsa kime yapıldığı ve miktarı, 
