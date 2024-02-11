@@ -421,5 +421,10 @@ namespace Banka_Otomasyonu
                 MessageBox.Show(dr[4]+" tarihinde "+dr[0]+" "+dr[1] + " tarafından " + dr[3] + " işlemi yapılmıştır ");
             }
         }
+
+        private void FrmMusteri_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

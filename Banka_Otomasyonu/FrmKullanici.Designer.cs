@@ -277,33 +277,37 @@ namespace Banka_Otomasyonu
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 20);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 28);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(848, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1272, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 450);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 658);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(848, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1272, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 20);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 430);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 630);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(848, 20);
+            this.barDockControlRight.Location = new System.Drawing.Point(1272, 28);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 430);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 630);
             // 
             // barButtonItem1
             // 
@@ -464,31 +468,35 @@ namespace Banka_Otomasyonu
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
             this.barDockControl1.Manager = this.barManager2;
-            this.barDockControl1.Size = new System.Drawing.Size(848, 20);
+            this.barDockControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControl1.Size = new System.Drawing.Size(1272, 28);
             // 
             // barDockControl2
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 450);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 658);
             this.barDockControl2.Manager = this.barManager2;
-            this.barDockControl2.Size = new System.Drawing.Size(848, 0);
+            this.barDockControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControl2.Size = new System.Drawing.Size(1272, 0);
             // 
             // barDockControl3
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl3.Location = new System.Drawing.Point(0, 20);
+            this.barDockControl3.Location = new System.Drawing.Point(0, 28);
             this.barDockControl3.Manager = this.barManager2;
-            this.barDockControl3.Size = new System.Drawing.Size(0, 430);
+            this.barDockControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 630);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(848, 20);
+            this.barDockControl4.Location = new System.Drawing.Point(1272, 28);
             this.barDockControl4.Manager = this.barManager2;
-            this.barDockControl4.Size = new System.Drawing.Size(0, 430);
+            this.barDockControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 630);
             // 
             // barButtonItem3
             // 
@@ -570,95 +578,107 @@ namespace Banka_Otomasyonu
             this.pnlKullaniciIslemleri.Controls.Add(this.txtKullaniciAdi);
             this.pnlKullaniciIslemleri.Controls.Add(this.labelControl3);
             this.pnlKullaniciIslemleri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlKullaniciIslemleri.Location = new System.Drawing.Point(0, 20);
+            this.pnlKullaniciIslemleri.Location = new System.Drawing.Point(0, 28);
+            this.pnlKullaniciIslemleri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlKullaniciIslemleri.Name = "pnlKullaniciIslemleri";
-            this.pnlKullaniciIslemleri.Size = new System.Drawing.Size(848, 430);
+            this.pnlKullaniciIslemleri.Size = new System.Drawing.Size(1272, 630);
             this.pnlKullaniciIslemleri.TabIndex = 18;
             this.pnlKullaniciIslemleri.Visible = false;
             // 
             // btnKullaniciSil
             // 
-            this.btnKullaniciSil.Location = new System.Drawing.Point(139, 144);
+            this.btnKullaniciSil.Location = new System.Drawing.Point(208, 210);
+            this.btnKullaniciSil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKullaniciSil.Name = "btnKullaniciSil";
-            this.btnKullaniciSil.Size = new System.Drawing.Size(91, 23);
+            this.btnKullaniciSil.Size = new System.Drawing.Size(136, 34);
             this.btnKullaniciSil.TabIndex = 21;
             this.btnKullaniciSil.Text = "Sil";
             this.btnKullaniciSil.Visible = false;
             // 
             // btnKullaniciGuncelle
             // 
-            this.btnKullaniciGuncelle.Location = new System.Drawing.Point(260, 144);
+            this.btnKullaniciGuncelle.Location = new System.Drawing.Point(390, 210);
+            this.btnKullaniciGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKullaniciGuncelle.Name = "btnKullaniciGuncelle";
-            this.btnKullaniciGuncelle.Size = new System.Drawing.Size(91, 23);
+            this.btnKullaniciGuncelle.Size = new System.Drawing.Size(136, 34);
             this.btnKullaniciGuncelle.TabIndex = 20;
             this.btnKullaniciGuncelle.Text = "Güncelle";
             this.btnKullaniciGuncelle.Visible = false;
             // 
             // txtKullaniciSifre
             // 
-            this.txtKullaniciSifre.Location = new System.Drawing.Point(139, 92);
+            this.txtKullaniciSifre.Location = new System.Drawing.Point(208, 134);
+            this.txtKullaniciSifre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciSifre.Name = "txtKullaniciSifre";
-            this.txtKullaniciSifre.Size = new System.Drawing.Size(333, 20);
+            this.txtKullaniciSifre.Size = new System.Drawing.Size(500, 26);
             this.txtKullaniciSifre.TabIndex = 16;
             // 
             // btnKullaniciEkle
             // 
-            this.btnKullaniciEkle.Location = new System.Drawing.Point(381, 144);
+            this.btnKullaniciEkle.Location = new System.Drawing.Point(572, 210);
+            this.btnKullaniciEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKullaniciEkle.Name = "btnKullaniciEkle";
-            this.btnKullaniciEkle.Size = new System.Drawing.Size(91, 23);
+            this.btnKullaniciEkle.Size = new System.Drawing.Size(136, 34);
             this.btnKullaniciEkle.TabIndex = 19;
             this.btnKullaniciEkle.Text = "Ekle";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(61, 43);
+            this.labelControl1.Location = new System.Drawing.Point(92, 63);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(50, 13);
+            this.labelControl1.Size = new System.Drawing.Size(74, 19);
             this.labelControl1.TabIndex = 11;
             this.labelControl1.Text = "Ad Soyad:";
             // 
             // txtKullaniciEmail
             // 
-            this.txtKullaniciEmail.Location = new System.Drawing.Point(139, 118);
+            this.txtKullaniciEmail.Location = new System.Drawing.Point(208, 172);
+            this.txtKullaniciEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciEmail.Name = "txtKullaniciEmail";
-            this.txtKullaniciEmail.Size = new System.Drawing.Size(333, 20);
+            this.txtKullaniciEmail.Size = new System.Drawing.Size(500, 26);
             this.txtKullaniciEmail.TabIndex = 18;
             // 
             // txtKullaniciAdSoyad
             // 
-            this.txtKullaniciAdSoyad.Location = new System.Drawing.Point(139, 40);
+            this.txtKullaniciAdSoyad.Location = new System.Drawing.Point(208, 58);
+            this.txtKullaniciAdSoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciAdSoyad.Name = "txtKullaniciAdSoyad";
-            this.txtKullaniciAdSoyad.Size = new System.Drawing.Size(333, 20);
+            this.txtKullaniciAdSoyad.Size = new System.Drawing.Size(500, 26);
             this.txtKullaniciAdSoyad.TabIndex = 12;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(61, 121);
+            this.labelControl4.Location = new System.Drawing.Point(92, 177);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(28, 13);
+            this.labelControl4.Size = new System.Drawing.Size(45, 19);
             this.labelControl4.TabIndex = 17;
             this.labelControl4.Text = "Email:";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(61, 69);
+            this.labelControl2.Location = new System.Drawing.Point(92, 101);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(59, 13);
+            this.labelControl2.Size = new System.Drawing.Size(93, 19);
             this.labelControl2.TabIndex = 13;
             this.labelControl2.Text = "Kullanıcı Adı:";
             // 
             // txtKullaniciAdi
             // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(139, 66);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(208, 96);
+            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(333, 20);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(500, 26);
             this.txtKullaniciAdi.TabIndex = 14;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(61, 95);
+            this.labelControl3.Location = new System.Drawing.Point(92, 139);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(26, 13);
+            this.labelControl3.Size = new System.Drawing.Size(38, 19);
             this.labelControl3.TabIndex = 15;
             this.labelControl3.Text = "Şifre:";
             // 
@@ -673,34 +693,38 @@ namespace Banka_Otomasyonu
             this.pnlIslemTurleri.Controls.Add(this.labelControl6);
             this.pnlIslemTurleri.Controls.Add(this.labelControl5);
             this.pnlIslemTurleri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlIslemTurleri.Location = new System.Drawing.Point(0, 20);
+            this.pnlIslemTurleri.Location = new System.Drawing.Point(0, 28);
+            this.pnlIslemTurleri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlIslemTurleri.Name = "pnlIslemTurleri";
-            this.pnlIslemTurleri.Size = new System.Drawing.Size(848, 430);
+            this.pnlIslemTurleri.Size = new System.Drawing.Size(1272, 630);
             this.pnlIslemTurleri.TabIndex = 22;
             this.pnlIslemTurleri.Visible = false;
             // 
             // CmbIslemTurleri
             // 
-            this.CmbIslemTurleri.Location = new System.Drawing.Point(190, 72);
+            this.CmbIslemTurleri.Location = new System.Drawing.Point(285, 105);
+            this.CmbIslemTurleri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CmbIslemTurleri.Name = "CmbIslemTurleri";
             this.CmbIslemTurleri.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CmbIslemTurleri.Size = new System.Drawing.Size(174, 20);
+            this.CmbIslemTurleri.Size = new System.Drawing.Size(261, 26);
             this.CmbIslemTurleri.TabIndex = 30;
             // 
             // txtYeniIslemTuru
             // 
-            this.txtYeniIslemTuru.Location = new System.Drawing.Point(190, 189);
+            this.txtYeniIslemTuru.Location = new System.Drawing.Point(285, 276);
+            this.txtYeniIslemTuru.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtYeniIslemTuru.MenuManager = this.barManager1;
             this.txtYeniIslemTuru.Name = "txtYeniIslemTuru";
-            this.txtYeniIslemTuru.Size = new System.Drawing.Size(174, 20);
+            this.txtYeniIslemTuru.Size = new System.Drawing.Size(261, 26);
             this.txtYeniIslemTuru.TabIndex = 29;
             // 
             // btnIslemEkle
             // 
-            this.btnIslemEkle.Location = new System.Drawing.Point(370, 187);
+            this.btnIslemEkle.Location = new System.Drawing.Point(555, 273);
+            this.btnIslemEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIslemEkle.Name = "btnIslemEkle";
-            this.btnIslemEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnIslemEkle.Size = new System.Drawing.Size(112, 34);
             this.btnIslemEkle.TabIndex = 28;
             this.btnIslemEkle.Text = "Ekle";
             this.btnIslemEkle.UseVisualStyleBackColor = true;
@@ -708,9 +732,10 @@ namespace Banka_Otomasyonu
             // 
             // btnIslemSil
             // 
-            this.btnIslemSil.Location = new System.Drawing.Point(370, 69);
+            this.btnIslemSil.Location = new System.Drawing.Point(555, 101);
+            this.btnIslemSil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIslemSil.Name = "btnIslemSil";
-            this.btnIslemSil.Size = new System.Drawing.Size(75, 23);
+            this.btnIslemSil.Size = new System.Drawing.Size(112, 34);
             this.btnIslemSil.TabIndex = 27;
             this.btnIslemSil.Text = "Sil";
             this.btnIslemSil.UseVisualStyleBackColor = true;
@@ -718,33 +743,37 @@ namespace Banka_Otomasyonu
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(101, 192);
+            this.labelControl8.Location = new System.Drawing.Point(152, 281);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(73, 13);
+            this.labelControl8.Size = new System.Drawing.Size(114, 19);
             this.labelControl8.TabIndex = 26;
             this.labelControl8.Text = "Yeni İşlem Türü";
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(34, 152);
+            this.labelControl7.Location = new System.Drawing.Point(51, 222);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(140, 13);
+            this.labelControl7.Size = new System.Drawing.Size(213, 19);
             this.labelControl7.TabIndex = 25;
             this.labelControl7.Text = "Siteme yeni işlem türü ekleme";
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(106, 79);
+            this.labelControl6.Location = new System.Drawing.Point(159, 115);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(58, 13);
+            this.labelControl6.Size = new System.Drawing.Size(91, 19);
             this.labelControl6.TabIndex = 24;
             this.labelControl6.Text = "İşlem Türleri";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(22, 41);
+            this.labelControl5.Location = new System.Drawing.Point(33, 60);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(142, 13);
+            this.labelControl5.Size = new System.Drawing.Size(215, 19);
             this.labelControl5.TabIndex = 23;
             this.labelControl5.Text = "Sistemde var olan işlem türleri";
             // 
@@ -770,178 +799,198 @@ namespace Banka_Otomasyonu
             this.pnlMusteriHesapAc.Controls.Add(this.labelControl10);
             this.pnlMusteriHesapAc.Controls.Add(this.labelControl9);
             this.pnlMusteriHesapAc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMusteriHesapAc.Location = new System.Drawing.Point(0, 20);
+            this.pnlMusteriHesapAc.Location = new System.Drawing.Point(0, 28);
+            this.pnlMusteriHesapAc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlMusteriHesapAc.Name = "pnlMusteriHesapAc";
-            this.pnlMusteriHesapAc.Size = new System.Drawing.Size(848, 430);
+            this.pnlMusteriHesapAc.Size = new System.Drawing.Size(1272, 630);
             this.pnlMusteriHesapAc.TabIndex = 31;
             this.pnlMusteriHesapAc.Visible = false;
             // 
             // cmbHesapNumaralari
             // 
-            this.cmbHesapNumaralari.Location = new System.Drawing.Point(620, 71);
+            this.cmbHesapNumaralari.Location = new System.Drawing.Point(930, 104);
+            this.cmbHesapNumaralari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbHesapNumaralari.MenuManager = this.barManager1;
             this.cmbHesapNumaralari.Name = "cmbHesapNumaralari";
             this.cmbHesapNumaralari.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbHesapNumaralari.Size = new System.Drawing.Size(212, 20);
+            this.cmbHesapNumaralari.Size = new System.Drawing.Size(318, 26);
             this.cmbHesapNumaralari.TabIndex = 23;
             // 
             // txtMusteriNumarasi
             // 
-            this.txtMusteriNumarasi.Location = new System.Drawing.Point(620, 32);
+            this.txtMusteriNumarasi.Location = new System.Drawing.Point(930, 47);
+            this.txtMusteriNumarasi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMusteriNumarasi.MenuManager = this.barManager1;
             this.txtMusteriNumarasi.Name = "txtMusteriNumarasi";
-            this.txtMusteriNumarasi.Size = new System.Drawing.Size(212, 20);
+            this.txtMusteriNumarasi.Size = new System.Drawing.Size(318, 26);
             this.txtMusteriNumarasi.TabIndex = 22;
             // 
             // rchMusteriAdres
             // 
-            this.rchMusteriAdres.Location = new System.Drawing.Point(104, 152);
+            this.rchMusteriAdres.Location = new System.Drawing.Point(156, 222);
+            this.rchMusteriAdres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rchMusteriAdres.MenuManager = this.barManager1;
             this.rchMusteriAdres.Name = "rchMusteriAdres";
-            this.rchMusteriAdres.Size = new System.Drawing.Size(212, 236);
+            this.rchMusteriAdres.Size = new System.Drawing.Size(318, 345);
             this.rchMusteriAdres.TabIndex = 21;
             // 
             // txtMusteriEmail
             // 
-            this.txtMusteriEmail.Location = new System.Drawing.Point(104, 124);
+            this.txtMusteriEmail.Location = new System.Drawing.Point(156, 181);
+            this.txtMusteriEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMusteriEmail.MenuManager = this.barManager1;
             this.txtMusteriEmail.Name = "txtMusteriEmail";
-            this.txtMusteriEmail.Size = new System.Drawing.Size(212, 20);
+            this.txtMusteriEmail.Size = new System.Drawing.Size(318, 26);
             this.txtMusteriEmail.TabIndex = 20;
             // 
             // txtMusteriTelefon
             // 
-            this.txtMusteriTelefon.Location = new System.Drawing.Point(104, 96);
+            this.txtMusteriTelefon.Location = new System.Drawing.Point(156, 140);
+            this.txtMusteriTelefon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMusteriTelefon.MenuManager = this.barManager1;
             this.txtMusteriTelefon.Name = "txtMusteriTelefon";
             this.txtMusteriTelefon.Properties.Mask.EditMask = "\\(\\d{3}\\)[0-9A-Z]{3}[0-9A-Z]{4}";
             this.txtMusteriTelefon.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
-            this.txtMusteriTelefon.Size = new System.Drawing.Size(212, 20);
+            this.txtMusteriTelefon.Size = new System.Drawing.Size(318, 26);
             this.txtMusteriTelefon.TabIndex = 19;
             // 
             // txtMusteriSoyad
             // 
-            this.txtMusteriSoyad.Location = new System.Drawing.Point(104, 64);
+            this.txtMusteriSoyad.Location = new System.Drawing.Point(156, 94);
+            this.txtMusteriSoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMusteriSoyad.MenuManager = this.barManager1;
             this.txtMusteriSoyad.Name = "txtMusteriSoyad";
-            this.txtMusteriSoyad.Size = new System.Drawing.Size(212, 20);
+            this.txtMusteriSoyad.Size = new System.Drawing.Size(318, 26);
             this.txtMusteriSoyad.TabIndex = 18;
             // 
             // txtMusteriAd
             // 
-            this.txtMusteriAd.Location = new System.Drawing.Point(104, 34);
+            this.txtMusteriAd.Location = new System.Drawing.Point(156, 50);
+            this.txtMusteriAd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMusteriAd.MenuManager = this.barManager1;
             this.txtMusteriAd.Name = "txtMusteriAd";
-            this.txtMusteriAd.Size = new System.Drawing.Size(212, 20);
+            this.txtMusteriAd.Size = new System.Drawing.Size(318, 26);
             this.txtMusteriAd.TabIndex = 17;
             // 
             // btnMusteriGuncelle
             // 
-            this.btnMusteriGuncelle.Location = new System.Drawing.Point(670, 325);
+            this.btnMusteriGuncelle.Location = new System.Drawing.Point(1005, 475);
+            this.btnMusteriGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMusteriGuncelle.Name = "btnMusteriGuncelle";
-            this.btnMusteriGuncelle.Size = new System.Drawing.Size(124, 23);
+            this.btnMusteriGuncelle.Size = new System.Drawing.Size(186, 34);
             this.btnMusteriGuncelle.TabIndex = 16;
             this.btnMusteriGuncelle.Text = "Müşteri Güncelle";
             this.btnMusteriGuncelle.Click += new System.EventHandler(this.btnMusteriGuncelle_Click);
             // 
             // btnMusteriEkle
             // 
-            this.btnMusteriEkle.Location = new System.Drawing.Point(522, 325);
+            this.btnMusteriEkle.Location = new System.Drawing.Point(783, 475);
+            this.btnMusteriEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMusteriEkle.Name = "btnMusteriEkle";
-            this.btnMusteriEkle.Size = new System.Drawing.Size(124, 23);
+            this.btnMusteriEkle.Size = new System.Drawing.Size(186, 34);
             this.btnMusteriEkle.TabIndex = 15;
             this.btnMusteriEkle.Text = "Müşteri Ekle";
             this.btnMusteriEkle.Click += new System.EventHandler(this.btnMusteriEkle_Click);
             // 
             // btnHesapSil
             // 
-            this.btnHesapSil.Location = new System.Drawing.Point(719, 277);
+            this.btnHesapSil.Location = new System.Drawing.Point(1078, 405);
+            this.btnHesapSil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHesapSil.Name = "btnHesapSil";
-            this.btnHesapSil.Size = new System.Drawing.Size(75, 23);
+            this.btnHesapSil.Size = new System.Drawing.Size(112, 34);
             this.btnHesapSil.TabIndex = 14;
             this.btnHesapSil.Text = "Hesap Sil";
             this.btnHesapSil.Click += new System.EventHandler(this.btnHesapSil_Click);
             // 
             // btnHesaplariGetir
             // 
-            this.btnHesaplariGetir.Location = new System.Drawing.Point(620, 277);
+            this.btnHesaplariGetir.Location = new System.Drawing.Point(930, 405);
+            this.btnHesaplariGetir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHesaplariGetir.Name = "btnHesaplariGetir";
-            this.btnHesaplariGetir.Size = new System.Drawing.Size(75, 23);
+            this.btnHesaplariGetir.Size = new System.Drawing.Size(112, 34);
             this.btnHesaplariGetir.TabIndex = 13;
             this.btnHesaplariGetir.Text = "Hesaplar Getir";
             this.btnHesaplariGetir.Click += new System.EventHandler(this.btnHesaplariGetir_Click);
             // 
             // btnHesapAc
             // 
-            this.btnHesapAc.Location = new System.Drawing.Point(522, 277);
+            this.btnHesapAc.Location = new System.Drawing.Point(783, 405);
+            this.btnHesapAc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHesapAc.Name = "btnHesapAc";
-            this.btnHesapAc.Size = new System.Drawing.Size(75, 23);
+            this.btnHesapAc.Size = new System.Drawing.Size(112, 34);
             this.btnHesapAc.TabIndex = 12;
             this.btnHesapAc.Text = "Hesap Aç";
             this.btnHesapAc.Click += new System.EventHandler(this.btnHesapAc_Click);
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(548, 77);
+            this.labelControl15.Location = new System.Drawing.Point(822, 113);
+            this.labelControl15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(46, 13);
+            this.labelControl15.Size = new System.Drawing.Size(68, 19);
             this.labelControl15.TabIndex = 6;
             this.labelControl15.Text = "Hesap No";
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(548, 39);
+            this.labelControl14.Location = new System.Drawing.Point(822, 57);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(51, 13);
+            this.labelControl14.Size = new System.Drawing.Size(76, 19);
             this.labelControl14.TabIndex = 5;
             this.labelControl14.Text = "Musteri No";
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(59, 152);
+            this.labelControl13.Location = new System.Drawing.Point(88, 222);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(32, 13);
+            this.labelControl13.Size = new System.Drawing.Size(47, 19);
             this.labelControl13.TabIndex = 4;
             this.labelControl13.Text = "Adres:";
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(30, 123);
+            this.labelControl12.Location = new System.Drawing.Point(45, 180);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(61, 13);
+            this.labelControl12.Size = new System.Drawing.Size(95, 19);
             this.labelControl12.TabIndex = 3;
             this.labelControl12.Text = "Email Adresi:";
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(23, 96);
+            this.labelControl11.Location = new System.Drawing.Point(34, 140);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(68, 13);
+            this.labelControl11.Size = new System.Drawing.Size(100, 19);
             this.labelControl11.TabIndex = 2;
             this.labelControl11.Text = "Cep Telefonu:";
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(57, 67);
+            this.labelControl10.Location = new System.Drawing.Point(86, 98);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(34, 13);
+            this.labelControl10.Size = new System.Drawing.Size(49, 19);
             this.labelControl10.TabIndex = 1;
             this.labelControl10.Text = "Soyad:";
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(74, 39);
+            this.labelControl9.Location = new System.Drawing.Point(111, 57);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(17, 13);
+            this.labelControl9.Size = new System.Drawing.Size(26, 19);
             this.labelControl9.TabIndex = 0;
             this.labelControl9.Text = "Ad:";
             // 
             // FrmKullanici
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 450);
+            this.ClientSize = new System.Drawing.Size(1272, 658);
             this.Controls.Add(this.pnlMusteriHesapAc);
             this.Controls.Add(this.pnlIslemTurleri);
             this.Controls.Add(this.pnlKullaniciIslemleri);
@@ -953,8 +1002,10 @@ namespace Banka_Otomasyonu
             this.Controls.Add(this.barDockControl4);
             this.Controls.Add(this.barDockControl2);
             this.Controls.Add(this.barDockControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmKullanici";
             this.Text = "Kullanici Formu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmKullanici_FormClosing);
             this.Load += new System.EventHandler(this.FrmKullanici_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager2)).EndInit();

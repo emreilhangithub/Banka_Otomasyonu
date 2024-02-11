@@ -208,7 +208,7 @@ namespace Banka_Otomasyonu
             this.TxtHaveleMiktar.Location = new System.Drawing.Point(465, 156);
             this.TxtHaveleMiktar.Margin = new System.Windows.Forms.Padding(4);
             this.TxtHaveleMiktar.Name = "TxtHaveleMiktar";
-            this.TxtHaveleMiktar.Size = new System.Drawing.Size(150, 28);
+            this.TxtHaveleMiktar.Size = new System.Drawing.Size(150, 26);
             this.TxtHaveleMiktar.TabIndex = 16;
             // 
             // TxtHavaleHesap
@@ -216,7 +216,7 @@ namespace Banka_Otomasyonu
             this.TxtHavaleHesap.Location = new System.Drawing.Point(465, 101);
             this.TxtHavaleHesap.Margin = new System.Windows.Forms.Padding(4);
             this.TxtHavaleHesap.Name = "TxtHavaleHesap";
-            this.TxtHavaleHesap.Size = new System.Drawing.Size(150, 28);
+            this.TxtHavaleHesap.Size = new System.Drawing.Size(150, 26);
             this.TxtHavaleHesap.TabIndex = 15;
             // 
             // labelControl18
@@ -314,7 +314,7 @@ namespace Banka_Otomasyonu
             this.TxtYatirTutar.Location = new System.Drawing.Point(442, 111);
             this.TxtYatirTutar.Margin = new System.Windows.Forms.Padding(4);
             this.TxtYatirTutar.Name = "TxtYatirTutar";
-            this.TxtYatirTutar.Size = new System.Drawing.Size(150, 28);
+            this.TxtYatirTutar.Size = new System.Drawing.Size(150, 26);
             this.TxtYatirTutar.TabIndex = 20;
             // 
             // labelControl19
@@ -394,7 +394,7 @@ namespace Banka_Otomasyonu
             this.TxtCekMiktar.Location = new System.Drawing.Point(442, 98);
             this.TxtCekMiktar.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCekMiktar.Name = "TxtCekMiktar";
-            this.TxtCekMiktar.Size = new System.Drawing.Size(150, 28);
+            this.TxtCekMiktar.Size = new System.Drawing.Size(150, 26);
             this.TxtCekMiktar.TabIndex = 24;
             // 
             // labelControl21
@@ -456,10 +456,10 @@ namespace Banka_Otomasyonu
             this.panelParaIslemleri.Controls.Add(this.LblBakiye);
             this.panelParaIslemleri.Controls.Add(this.labelControl7);
             this.panelParaIslemleri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelParaIslemleri.Location = new System.Drawing.Point(0, 34);
+            this.panelParaIslemleri.Location = new System.Drawing.Point(0, 28);
             this.panelParaIslemleri.Margin = new System.Windows.Forms.Padding(4);
             this.panelParaIslemleri.Name = "panelParaIslemleri";
-            this.panelParaIslemleri.Size = new System.Drawing.Size(1017, 475);
+            this.panelParaIslemleri.Size = new System.Drawing.Size(1017, 481);
             this.panelParaIslemleri.TabIndex = 0;
             this.panelParaIslemleri.Visible = false;
             // 
@@ -496,7 +496,7 @@ namespace Banka_Otomasyonu
             this.LblTurIslem.Location = new System.Drawing.Point(868, 12);
             this.LblTurIslem.Margin = new System.Windows.Forms.Padding(4);
             this.LblTurIslem.Name = "LblTurIslem";
-            this.LblTurIslem.Size = new System.Drawing.Size(63, 28);
+            this.LblTurIslem.Size = new System.Drawing.Size(63, 26);
             this.LblTurIslem.TabIndex = 10;
             // 
             // labelControl3
@@ -524,7 +524,7 @@ namespace Banka_Otomasyonu
             this.CmbHesapNo.Name = "CmbHesapNo";
             this.CmbHesapNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CmbHesapNo.Size = new System.Drawing.Size(150, 28);
+            this.CmbHesapNo.Size = new System.Drawing.Size(150, 26);
             this.CmbHesapNo.TabIndex = 3;
             this.CmbHesapNo.SelectedIndexChanged += new System.EventHandler(this.CmbHesapNo_SelectedIndexChanged);
             // 
@@ -665,7 +665,7 @@ namespace Banka_Otomasyonu
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1017, 34);
+            this.barDockControlTop.Size = new System.Drawing.Size(1017, 28);
             // 
             // barDockControlBottom
             // 
@@ -679,17 +679,17 @@ namespace Banka_Otomasyonu
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 34);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 475);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 481);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1017, 34);
+            this.barDockControlRight.Location = new System.Drawing.Point(1017, 28);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 475);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 481);
             // 
             // barButtonItem1
             // 
@@ -788,9 +788,9 @@ namespace Banka_Otomasyonu
             this.panelRapor.Controls.Add(this.dateSecim1);
             this.panelRapor.Controls.Add(this.BtnOzetle);
             this.panelRapor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRapor.Location = new System.Drawing.Point(0, 34);
+            this.panelRapor.Location = new System.Drawing.Point(0, 28);
             this.panelRapor.Name = "panelRapor";
-            this.panelRapor.Size = new System.Drawing.Size(1017, 475);
+            this.panelRapor.Size = new System.Drawing.Size(1017, 481);
             this.panelRapor.TabIndex = 27;
             this.panelRapor.Visible = false;
             // 
@@ -851,7 +851,7 @@ namespace Banka_Otomasyonu
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateSecim2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateSecim2.Size = new System.Drawing.Size(150, 28);
+            this.dateSecim2.Size = new System.Drawing.Size(150, 26);
             this.dateSecim2.TabIndex = 23;
             // 
             // dateSecim1
@@ -864,7 +864,7 @@ namespace Banka_Otomasyonu
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateSecim1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateSecim1.Size = new System.Drawing.Size(150, 28);
+            this.dateSecim1.Size = new System.Drawing.Size(150, 26);
             this.dateSecim1.TabIndex = 22;
             // 
             // BtnOzetle
@@ -896,7 +896,7 @@ namespace Banka_Otomasyonu
             this.cmbSecim1.Properties.Items.AddRange(new object[] {
             "USD",
             "TRY"});
-            this.cmbSecim1.Size = new System.Drawing.Size(93, 28);
+            this.cmbSecim1.Size = new System.Drawing.Size(93, 26);
             this.cmbSecim1.TabIndex = 25;
             // 
             // txtSonuc
@@ -904,7 +904,7 @@ namespace Banka_Otomasyonu
             this.txtSonuc.Enabled = false;
             this.txtSonuc.Location = new System.Drawing.Point(181, 57);
             this.txtSonuc.Name = "txtSonuc";
-            this.txtSonuc.Size = new System.Drawing.Size(93, 28);
+            this.txtSonuc.Size = new System.Drawing.Size(93, 26);
             this.txtSonuc.TabIndex = 24;
             // 
             // cmbSecim2
@@ -917,14 +917,14 @@ namespace Banka_Otomasyonu
             this.cmbSecim2.Properties.Items.AddRange(new object[] {
             "TRY",
             "USD"});
-            this.cmbSecim2.Size = new System.Drawing.Size(93, 28);
+            this.cmbSecim2.Size = new System.Drawing.Size(93, 26);
             this.cmbSecim2.TabIndex = 26;
             // 
             // txtGiris
             // 
             this.txtGiris.Location = new System.Drawing.Point(58, 57);
             this.txtGiris.Name = "txtGiris";
-            this.txtGiris.Size = new System.Drawing.Size(93, 28);
+            this.txtGiris.Size = new System.Drawing.Size(93, 26);
             this.txtGiris.TabIndex = 23;
             // 
             // panelKur
@@ -935,9 +935,9 @@ namespace Banka_Otomasyonu
             this.panelKur.Controls.Add(this.cmbSecim1);
             this.panelKur.Controls.Add(this.btnHesapla);
             this.panelKur.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelKur.Location = new System.Drawing.Point(0, 34);
+            this.panelKur.Location = new System.Drawing.Point(0, 28);
             this.panelKur.Name = "panelKur";
-            this.panelKur.Size = new System.Drawing.Size(1017, 475);
+            this.panelKur.Size = new System.Drawing.Size(1017, 481);
             this.panelKur.TabIndex = 31;
             this.panelKur.Visible = false;
             // 
@@ -958,6 +958,7 @@ namespace Banka_Otomasyonu
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMusteri";
             this.Text = "Müşteri Paneli";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMusteri_FormClosing);
             this.Load += new System.EventHandler(this.FrmMusteri_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabHavale.ResumeLayout(false);

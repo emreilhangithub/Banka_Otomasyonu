@@ -659,5 +659,10 @@ namespace Banka_Otomasyonu
         {
 
         }
+
+        private void FrmKullanici_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
